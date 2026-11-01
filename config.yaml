@@ -1,0 +1,110 @@
+name: Xndeye IPA
+identifier: io.xndeye.ipa
+subtitle: 收集一些实用的开源 iOS 应用
+iconURL: https://github.com/xndeye.png
+upstream:
+
+  feather:
+    repo: claration/feather
+    name: Feather
+    bundleIdentifier: thewonderofyou.Feather
+    description: 开源 IPA 签名工具
+    asset: ^Feather\.ipa$
+
+  piliplus:
+    repo: bggRGjQaUbCoE/PiliPlus
+    name: PiliPlus
+    bundleIdentifier: com.example.piliplus
+    description: 哔哩哔哩第三方客户端
+    asset: ^PiliPlus_ios_.*\.ipa$
+
+  c001apk:
+    repo: TG-Twilight/c001apk
+    name: c001apk
+    bundleIdentifier: com.example.c001apk.flutter
+    description: 第三方酷安客户端
+    asset: ^c001apk-.*-ios-arm64-unsigned\.ipa$
+
+  kazumi:
+    repo: Predidit/Kazumi
+    name: Kazumi
+    bundleIdentifier: com.example.kazumi
+    description: 动漫播放与规则搜索
+    asset: ^Kazumi_ios_.*_no_sign\.ipa$
+
+  animeko:
+    repo: open-ani/animeko
+    name: Animeko
+    bundleIdentifier: org.animeko.animeko
+    description: 追番与弹幕客户端
+    asset: ^ani-.*\.ipa$
+
+  fluxdown:
+    repo: zerx-lab/FluxDown
+    name: FluxDown
+    bundleIdentifier: com.fluxdown.app
+    description: 多协议下载管理器
+    asset: ^FluxDown-.*-ios-sideload-unsigned\.ipa$
+
+  serverbox:
+    repo: lollipopkit/flutter_server_box
+    name: ServerBox
+    bundleIdentifier: com.lollipopkit.toolbox
+    description: SSH 与服务器管理
+    asset: ^ServerBox_.*_NoSign\.ipa$
+
+  kelivo:
+    repo: Chevey339/kelivo
+    name: Kelivo
+    bundleIdentifier: psyche.kelivo
+    description: 多模型 AI 客户端
+    asset: ^Kelivo_ios_.*\.ipa$
+
+  spotube:
+    repo: team-spotube/spotube
+    name: Spotube
+    bundleIdentifier: org.spotube.spotube.Spotube
+    description: 开源音乐客户端
+    asset: ^Spotube-iOS\.ipa$|^Spotube-ios\.ipa$
+
+  purelive:
+    repo: liuchuancong/pure_live
+    name: Pure Live
+    bundleIdentifier: com.mystyle.purelive.liu
+    description: 聚合直播客户端
+    asset: ^PureLive-.*-ios-arm64-trollstore\.ipa$
+
+  anich:
+    repo: Sle2p/AniCh
+    name: AniCh
+    bundleIdentifier: cx.xs.open
+    description: 动漫聚合与弹幕播放
+    asset: ^anich-ios-no_sign-\d+(?:\.\d+)*\.ipa$
+
+  itorrent:
+    repo: XITRIX/iTorrent
+    name: iTorrent
+    bundleIdentifier: com.xitrix.iTorrent2
+    description: iOS BT 与磁力下载客户端
+    asset: ^iTorrent\.ipa$
+
+  skystream:
+    repo: akashdh11/skystream
+    name: SkyStream
+    bundleIdentifier: dev.akash.skystream
+    description: 影视聚合与扩展播放器
+    asset: ^skystream-ios-unsigned-v\d+(?:\.\d+)*\.ipa$
+
+  melox:
+    repo: youshen2/MeloX
+    name: MeloX
+    bundleIdentifier: azki.moye.MeloX
+    description: 原生 SwiftUI 网易云音乐第三方客户端
+    asset: ^MeloX-iOS-unsigned\.ipa$
+
+  beansmusic:
+    repo: XIaodou0416/Beans-Music
+    name: Beans Music
+    bundleIdentifier: com.beans.app
+    description: SwiftUI 多平台音乐客户端，支持网易云音乐
+    asset: ^Beans-unsigned\.ipa$
