@@ -9,6 +9,8 @@ on:
     paths:
       - config.yaml
       - generate.py
+      - index.html
+      - 'icons/**'
       - requirements.txt
       - .github/workflows/release.yml
 
