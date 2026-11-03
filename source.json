@@ -1,0 +1,821 @@
+{
+  "name": "Xndeye IPA",
+  "identifier": "io.xndeye.ipa",
+  "subtitle": "收集一些实用的开源 iOS 应用",
+  "iconURL": "https://github.com/xndeye.png",
+  "apps": [
+    {
+      "name": "Feather",
+      "bundleIdentifier": "thewonderofyou.Feather",
+      "developerName": "claration",
+      "subtitle": "IPA 签名与安装工具，支持证书管理和软件源",
+      "localizedDescription": "IPA 签名与安装工具，支持证书管理和软件源",
+      "iconURL": "https://xndeye.github.io/ipa/icons/feather.png",
+      "version": "2.9.0",
+      "versionDate": "2026-07-05",
+      "size": 14241853,
+      "downloadURL": "https://github.com/claration/feather/releases/download/v2.9.0/Feather.ipa",
+      "versions": [
+        {
+          "version": "2.9.0",
+          "date": "2026-07-05",
+          "downloadURL": "https://github.com/claration/feather/releases/download/v2.9.0/Feather.ipa",
+          "size": 14241853
+        },
+        {
+          "version": "2.8.2",
+          "date": "2026-04-22",
+          "downloadURL": "https://github.com/claration/feather/releases/download/v2.8.2/Feather.ipa",
+          "size": 14242031
+        },
+        {
+          "version": "2.7.0",
+          "date": "2026-04-05",
+          "downloadURL": "https://github.com/claration/feather/releases/download/v2.7.0/Feather.ipa",
+          "size": 14154834
+        },
+        {
+          "version": "2.6.0",
+          "date": "2026-02-04",
+          "downloadURL": "https://github.com/claration/feather/releases/download/v2.6.0/Feather.ipa",
+          "size": 14118478
+        },
+        {
+          "version": "2.5.0",
+          "date": "2025-12-23",
+          "downloadURL": "https://github.com/claration/feather/releases/download/v2.5.0/Feather.ipa",
+          "size": 12720470
+        }
+      ]
+    },
+    {
+      "name": "PiliPlus",
+      "bundleIdentifier": "com.example.piliplus",
+      "developerName": "bggRGjQaUbCoE",
+      "subtitle": "第三方哔哩哔哩客户端，支持弹幕与视频缓存",
+      "localizedDescription": "第三方哔哩哔哩客户端，支持弹幕与视频缓存",
+      "iconURL": "https://xndeye.github.io/ipa/icons/piliplus.png",
+      "version": "2.2.0.2",
+      "versionDate": "2026-11-03",
+      "size": 24933082,
+      "downloadURL": "https://github.com/bggRGjQaUbCoE/PiliPlus/releases/download/2.2.0.2/PiliPlus_ios_2.2.0%2B5598.ipa",
+      "versions": [
+        {
+          "version": "2.2.0.2",
+          "date": "2026-11-03",
+          "downloadURL": "https://github.com/bggRGjQaUbCoE/PiliPlus/releases/download/2.2.0.2/PiliPlus_ios_2.2.0%2B5598.ipa",
+          "size": 24933082
+        },
+        {
+          "version": "2.2.0.1",
+          "date": "2026-11-02",
+          "downloadURL": "https://github.com/bggRGjQaUbCoE/PiliPlus/releases/download/2.2.0.1/PiliPlus_ios_2.2.0%2B5590.ipa",
+          "size": 24914746
+        },
+        {
+          "version": "2.2.0",
+          "date": "2026-11-01",
+          "downloadURL": "https://github.com/bggRGjQaUbCoE/PiliPlus/releases/download/2.2.0/PiliPlus_ios_2.2.0%2B5580.ipa",
+          "size": 24921912
+        },
+        {
+          "version": "2.1.6.2",
+          "date": "2026-10-10",
+          "downloadURL": "https://github.com/bggRGjQaUbCoE/PiliPlus/releases/download/2.1.6.2/PiliPlus_ios_2.1.6%2B5472.ipa",
+          "size": 24353925
+        },
+        {
+          "version": "2.1.6.1",
+          "date": "2026-10-10",
+          "downloadURL": "https://github.com/bggRGjQaUbCoE/PiliPlus/releases/download/2.1.6.1/PiliPlus_ios_2.1.6%2B5471.ipa",
+          "size": 24353584
+        }
+      ]
+    },
+    {
+      "name": "c001apk",
+      "bundleIdentifier": "com.example.c001apk.flutter",
+      "developerName": "TG-Twilight",
+      "subtitle": "非官方酷安客户端，支持动态、应用和社区内容浏览",
+      "localizedDescription": "非官方酷安客户端，支持动态、应用和社区内容浏览",
+      "iconURL": "https://xndeye.github.io/ipa/icons/c001apk.png",
+      "version": "1.5.1",
+      "versionDate": "2026-10-30",
+      "size": 13860003,
+      "downloadURL": "https://github.com/TG-Twilight/c001apk/releases/download/1.5.1-release/c001apk-1.5.1%2B20261030-ios-arm64-unsigned.ipa",
+      "versions": [
+        {
+          "version": "1.5.1",
+          "date": "2026-10-30",
+          "downloadURL": "https://github.com/TG-Twilight/c001apk/releases/download/1.5.1-release/c001apk-1.5.1%2B20261030-ios-arm64-unsigned.ipa",
+          "size": 13860003
+        },
+        {
+          "version": "1.5.0",
+          "date": "2026-10-28",
+          "downloadURL": "https://github.com/TG-Twilight/c001apk/releases/download/1.5.0-release/c001apk-1.5.0%2B20261028-ios-arm64-unsigned.ipa",
+          "size": 13834679
+        },
+        {
+          "version": "1.3.5",
+          "date": "2026-10-23",
+          "downloadURL": "https://github.com/TG-Twilight/c001apk/releases/download/1.3.5-release/c001apk-1.3.5%2B20261024-ios-arm64-unsigned.ipa",
+          "size": 13370150
+        },
+        {
+          "version": "1.3.2",
+          "date": "2026-10-23",
+          "downloadURL": "https://github.com/TG-Twilight/c001apk/releases/download/1.3.2-release/c001apk-1.3.2%2B20261023-ios-arm64-unsigned.ipa",
+          "size": 13146067
+        },
+        {
+          "version": "1.2.8",
+          "date": "2026-10-18",
+          "downloadURL": "https://github.com/TG-Twilight/c001apk/releases/download/1.2.8-release/c001apk-1.2.8%2B20261018-ios-arm64-unsigned.ipa",
+          "size": 30059496
+        }
+      ]
+    },
+    {
+      "name": "Kazumi",
+      "bundleIdentifier": "com.example.kazumi",
+      "developerName": "Predidit",
+      "subtitle": "基于自定义规则的番剧搜索与播放客户端",
+      "localizedDescription": "基于自定义规则的番剧搜索与播放客户端",
+      "iconURL": "https://xndeye.github.io/ipa/icons/kazumi.png",
+      "version": "2.4.2",
+      "versionDate": "2026-10-23",
+      "size": 30521004,
+      "downloadURL": "https://github.com/Predidit/Kazumi/releases/download/2.4.2/Kazumi_ios_2.4.2_no_sign.ipa",
+      "versions": [
+        {
+          "version": "2.4.2",
+          "date": "2026-10-23",
+          "downloadURL": "https://github.com/Predidit/Kazumi/releases/download/2.4.2/Kazumi_ios_2.4.2_no_sign.ipa",
+          "size": 30521004
+        },
+        {
+          "version": "2.4.1",
+          "date": "2026-10-22",
+          "downloadURL": "https://github.com/Predidit/Kazumi/releases/download/2.4.1/Kazumi_ios_2.4.1_no_sign.ipa",
+          "size": 30514613
+        },
+        {
+          "version": "2.4.0",
+          "date": "2026-10-22",
+          "downloadURL": "https://github.com/Predidit/Kazumi/releases/download/2.4.0/Kazumi_ios_2.4.0_no_sign.ipa",
+          "size": 30514666
+        },
+        {
+          "version": "2.3.9",
+          "date": "2026-10-14",
+          "downloadURL": "https://github.com/Predidit/Kazumi/releases/download/2.3.9/Kazumi_ios_2.3.9_no_sign.ipa",
+          "size": 30477942
+        },
+        {
+          "version": "2.3.8",
+          "date": "2026-10-07",
+          "downloadURL": "https://github.com/Predidit/Kazumi/releases/download/2.3.8/Kazumi_ios_2.3.8_no_sign.ipa",
+          "size": 30463104
+        }
+      ]
+    },
+    {
+      "name": "Animeko",
+      "bundleIdentifier": "org.animeko.animeko",
+      "developerName": "open-ani",
+      "subtitle": "多源追番客户端，支持弹幕和 Bangumi 进度同步",
+      "localizedDescription": "多源追番客户端，支持弹幕和 Bangumi 进度同步",
+      "iconURL": "https://xndeye.github.io/ipa/icons/animeko.png",
+      "version": "6.4.0",
+      "versionDate": "2026-10-24",
+      "size": 48615547,
+      "downloadURL": "https://github.com/open-ani/animeko/releases/download/v6.4.0/ani-6.4.0.ipa",
+      "versions": [
+        {
+          "version": "6.4.0",
+          "date": "2026-10-24",
+          "downloadURL": "https://github.com/open-ani/animeko/releases/download/v6.4.0/ani-6.4.0.ipa",
+          "size": 48615547
+        },
+        {
+          "version": "6.3.0",
+          "date": "2026-10-13",
+          "downloadURL": "https://github.com/open-ani/animeko/releases/download/v6.3.0/ani-6.3.0.ipa",
+          "size": 46485035
+        },
+        {
+          "version": "6.2.0",
+          "date": "2026-09-26",
+          "downloadURL": "https://github.com/open-ani/animeko/releases/download/v6.2.0/ani-6.2.0.ipa",
+          "size": 45401084
+        },
+        {
+          "version": "6.1.0",
+          "date": "2026-08-28",
+          "downloadURL": "https://github.com/open-ani/animeko/releases/download/v6.1.0/ani-6.1.0.ipa",
+          "size": 44425669
+        },
+        {
+          "version": "6.0.0",
+          "date": "2026-08-01",
+          "downloadURL": "https://github.com/open-ani/animeko/releases/download/v6.0.0/ani-6.0.0.ipa",
+          "size": 41391524
+        }
+      ]
+    },
+    {
+      "name": "FluxDown",
+      "bundleIdentifier": "com.fluxdown.app",
+      "developerName": "zerx-lab",
+      "subtitle": "多协议下载管理器，支持 HTTP、BT 和 eD2K 等协议",
+      "localizedDescription": "多协议下载管理器，支持 HTTP、BT 和 eD2K 等协议",
+      "iconURL": "https://xndeye.github.io/ipa/icons/fluxdown.png",
+      "version": "0.6.6",
+      "versionDate": "2026-11-02",
+      "size": 27333685,
+      "downloadURL": "https://github.com/zerx-lab/FluxDown/releases/download/v0.6.6/FluxDown-0.6.6-ios-sideload-unsigned.ipa",
+      "versions": [
+        {
+          "version": "0.6.6",
+          "date": "2026-11-02",
+          "downloadURL": "https://github.com/zerx-lab/FluxDown/releases/download/v0.6.6/FluxDown-0.6.6-ios-sideload-unsigned.ipa",
+          "size": 27333685
+        },
+        {
+          "version": "0.6.5",
+          "date": "2026-11-01",
+          "downloadURL": "https://github.com/zerx-lab/FluxDown/releases/download/v0.6.5/FluxDown-0.6.5-ios-sideload-unsigned.ipa",
+          "size": 31965016
+        },
+        {
+          "version": "0.6.4",
+          "date": "2026-10-30",
+          "downloadURL": "https://github.com/zerx-lab/FluxDown/releases/download/v0.6.4/FluxDown-0.6.4-ios-sideload-unsigned.ipa",
+          "size": 31447129
+        },
+        {
+          "version": "0.6.3",
+          "date": "2026-10-24",
+          "downloadURL": "https://github.com/zerx-lab/FluxDown/releases/download/v0.6.3/FluxDown-0.6.3-ios-sideload-unsigned.ipa",
+          "size": 26358090
+        },
+        {
+          "version": "0.6.2",
+          "date": "2026-10-24",
+          "downloadURL": "https://github.com/zerx-lab/FluxDown/releases/download/v0.6.2/FluxDown-0.6.2-ios-sideload-unsigned.ipa",
+          "size": 25943281
+        }
+      ]
+    },
+    {
+      "name": "ServerBox",
+      "bundleIdentifier": "com.lollipopkit.toolbox",
+      "developerName": "lollipopkit",
+      "subtitle": "服务器管理工具，支持 SSH、SFTP 和状态监控",
+      "localizedDescription": "服务器管理工具，支持 SSH、SFTP 和状态监控",
+      "iconURL": "https://xndeye.github.io/ipa/icons/serverbox.png",
+      "version": "1.0.1856",
+      "versionDate": "2026-11-01",
+      "size": 46255780,
+      "downloadURL": "https://github.com/lollipopkit/flutter_server_box/releases/download/v1.0.1856/ServerBox_v1.0.1856_NoSign.ipa",
+      "versions": [
+        {
+          "version": "1.0.1856",
+          "date": "2026-11-01",
+          "downloadURL": "https://github.com/lollipopkit/flutter_server_box/releases/download/v1.0.1856/ServerBox_v1.0.1856_NoSign.ipa",
+          "size": 46255780
+        },
+        {
+          "version": "1.0.1844",
+          "date": "2026-10-29",
+          "downloadURL": "https://github.com/lollipopkit/flutter_server_box/releases/download/v1.0.1844/ServerBox_v1.0.1844_NoSign.ipa",
+          "size": 45584899
+        },
+        {
+          "version": "1.0.1816",
+          "date": "2026-10-20",
+          "downloadURL": "https://github.com/lollipopkit/flutter_server_box/releases/download/v1.0.1816/ServerBox_v1.0.1816_NoSign.ipa",
+          "size": 45197952
+        },
+        {
+          "version": "1.0.1787",
+          "date": "2026-10-16",
+          "downloadURL": "https://github.com/lollipopkit/flutter_server_box/releases/download/v1.0.1787/ServerBox_v1.0.1787_NoSign.ipa",
+          "size": 45075691
+        },
+        {
+          "version": "1.0.1773",
+          "date": "2026-10-13",
+          "downloadURL": "https://github.com/lollipopkit/flutter_server_box/releases/download/v1.0.1773/ServerBox_v1.0.1773_NoSign.ipa",
+          "size": 42528037
+        }
+      ]
+    },
+    {
+      "name": "Kelivo",
+      "bundleIdentifier": "psyche.kelivo",
+      "developerName": "Chevey339",
+      "subtitle": "多模型 AI 客户端，支持工具调用与 Agent 工作流",
+      "localizedDescription": "多模型 AI 客户端，支持工具调用与 Agent 工作流",
+      "iconURL": "https://xndeye.github.io/ipa/icons/kelivo.png",
+      "version": "1.3.4",
+      "versionDate": "2026-11-02",
+      "size": 46627606,
+      "downloadURL": "https://github.com/Chevey339/kelivo/releases/download/v1.3.4/Kelivo_ios_1.3.4%2B84.ipa",
+      "versions": [
+        {
+          "version": "1.3.4",
+          "date": "2026-11-02",
+          "downloadURL": "https://github.com/Chevey339/kelivo/releases/download/v1.3.4/Kelivo_ios_1.3.4%2B84.ipa",
+          "size": 46627606
+        },
+        {
+          "version": "1.3.3",
+          "date": "2026-11-02",
+          "downloadURL": "https://github.com/Chevey339/kelivo/releases/download/v1.3.3/Kelivo_ios_1.3.3%2B83.ipa",
+          "size": 46628767
+        },
+        {
+          "version": "1.3.2",
+          "date": "2026-10-26",
+          "downloadURL": "https://github.com/Chevey339/kelivo/releases/download/v1.3.2/Kelivo_ios_1.3.2%2B81.ipa",
+          "size": 46210644
+        },
+        {
+          "version": "1.3.1",
+          "date": "2026-10-09",
+          "downloadURL": "https://github.com/Chevey339/kelivo/releases/download/v1.3.1/Kelivo_ios_1.3.1%2B80.ipa",
+          "size": 43616594
+        },
+        {
+          "version": "1.3.0",
+          "date": "2026-09-22",
+          "downloadURL": "https://github.com/Chevey339/kelivo/releases/download/v1.3.0/Kelivo_ios_1.3.0%2B79.ipa",
+          "size": 42750537
+        }
+      ]
+    },
+    {
+      "name": "Spotube",
+      "bundleIdentifier": "org.spotube.spotube.Spotube",
+      "developerName": "team-spotube",
+      "subtitle": "插件驱动的开源音乐播放器，支持歌词与歌曲下载",
+      "localizedDescription": "插件驱动的开源音乐播放器，支持歌词与歌曲下载",
+      "iconURL": "https://xndeye.github.io/ipa/icons/spotube.png",
+      "version": "5.1.2",
+      "versionDate": "2026-06-05",
+      "size": 34853093,
+      "downloadURL": "https://github.com/team-spotube/spotube/releases/download/v5.1.2/Spotube-iOS.ipa",
+      "versions": [
+        {
+          "version": "5.1.2",
+          "date": "2026-06-05",
+          "downloadURL": "https://github.com/team-spotube/spotube/releases/download/v5.1.2/Spotube-iOS.ipa",
+          "size": 34853093
+        },
+        {
+          "version": "5.1.1",
+          "date": "2026-02-24",
+          "downloadURL": "https://github.com/team-spotube/spotube/releases/download/v5.1.1/Spotube-iOS.ipa",
+          "size": 34926819
+        },
+        {
+          "version": "5.1.0",
+          "date": "2025-11-14",
+          "downloadURL": "https://github.com/team-spotube/spotube/releases/download/v5.1.0/Spotube-iOS.ipa",
+          "size": 34982347
+        },
+        {
+          "version": "5.0.0",
+          "date": "2025-09-11",
+          "downloadURL": "https://github.com/team-spotube/spotube/releases/download/v5.0.0/Spotube-iOS.ipa",
+          "size": 34486552
+        },
+        {
+          "version": "4.0.2",
+          "date": "2025-03-16",
+          "downloadURL": "https://github.com/team-spotube/spotube/releases/download/v4.0.2/Spotube-iOS.ipa",
+          "size": 38528926
+        }
+      ]
+    },
+    {
+      "name": "Pure Live",
+      "bundleIdentifier": "com.mystyle.purelive.liu",
+      "developerName": "liuchuancong",
+      "subtitle": "多平台直播聚合客户端，支持弹幕与多画面观看",
+      "localizedDescription": "多平台直播聚合客户端，支持弹幕与多画面观看",
+      "iconURL": "https://xndeye.github.io/ipa/icons/purelive.png",
+      "version": "3.1.19",
+      "versionDate": "2026-10-10",
+      "size": 66858114,
+      "downloadURL": "https://github.com/liuchuancong/pure_live/releases/download/v3.1.19/PureLive-3.1.19-4108-ios-arm64-trollstore.ipa",
+      "versions": [
+        {
+          "version": "3.1.19",
+          "date": "2026-10-10",
+          "downloadURL": "https://github.com/liuchuancong/pure_live/releases/download/v3.1.19/PureLive-3.1.19-4108-ios-arm64-trollstore.ipa",
+          "size": 66858114
+        },
+        {
+          "version": "3.1.18",
+          "date": "2026-10-08",
+          "downloadURL": "https://github.com/liuchuancong/pure_live/releases/download/v3.1.18/PureLive-3.1.18-4107-ios-arm64-trollstore.ipa",
+          "size": 66861211
+        },
+        {
+          "version": "3.1.17",
+          "date": "2026-09-27",
+          "downloadURL": "https://github.com/liuchuancong/pure_live/releases/download/v3.1.17/PureLive-3.1.17-4106-ios-arm64-trollstore.ipa",
+          "size": 65187928
+        },
+        {
+          "version": "3.1.6",
+          "date": "2026-09-26",
+          "downloadURL": "https://github.com/liuchuancong/pure_live/releases/download/v3.1.6/PureLive-3.1.6-4105-ios-arm64-trollstore.ipa",
+          "size": 65178311
+        },
+        {
+          "version": "3.1.5",
+          "date": "2026-09-24",
+          "downloadURL": "https://github.com/liuchuancong/pure_live/releases/download/v3.1.5/PureLive-3.1.5-4104-ios-arm64-trollstore.ipa",
+          "size": 60990793
+        }
+      ]
+    },
+    {
+      "name": "AniCh",
+      "bundleIdentifier": "cx.xs.open",
+      "developerName": "Sle2p",
+      "subtitle": "番剧搜索与追番客户端，支持弹幕和离线缓存",
+      "localizedDescription": "番剧搜索与追番客户端，支持弹幕和离线缓存",
+      "iconURL": "https://xndeye.github.io/ipa/icons/anich.png",
+      "version": "1.5.27",
+      "versionDate": "2026-10-05",
+      "size": 41226765,
+      "downloadURL": "https://github.com/Sle2p/AniCh/releases/download/1.5.27/anich-ios-no_sign-1.5.27.ipa",
+      "versions": [
+        {
+          "version": "1.5.27",
+          "date": "2026-10-05",
+          "downloadURL": "https://github.com/Sle2p/AniCh/releases/download/1.5.27/anich-ios-no_sign-1.5.27.ipa",
+          "size": 41226765
+        },
+        {
+          "version": "1.5.26",
+          "date": "2026-10-01",
+          "downloadURL": "https://github.com/Sle2p/AniCh/releases/download/1.5.26/anich-ios-no_sign-1.5.26.ipa",
+          "size": 41219984
+        },
+        {
+          "version": "1.5.25",
+          "date": "2026-09-15",
+          "downloadURL": "https://github.com/Sle2p/AniCh/releases/download/1.5.25/anich-ios-no_sign-1.5.25.ipa",
+          "size": 41219710
+        },
+        {
+          "version": "1.5.24",
+          "date": "2026-09-04",
+          "downloadURL": "https://github.com/Sle2p/AniCh/releases/download/1.5.24/anich-ios-no_sign-1.5.24.ipa",
+          "size": 41197017
+        },
+        {
+          "version": "1.5.23",
+          "date": "2026-08-24",
+          "downloadURL": "https://github.com/Sle2p/AniCh/releases/download/1.5.23/anich-ios-no_sign-1.5.23.ipa",
+          "size": 41195569
+        }
+      ]
+    },
+    {
+      "name": "iTorrent",
+      "bundleIdentifier": "com.xitrix.iTorrent2",
+      "developerName": "XITRIX",
+      "subtitle": "iOS BT 下载客户端，支持磁力链接与内置播放",
+      "localizedDescription": "iOS BT 下载客户端，支持磁力链接与内置播放",
+      "iconURL": "https://xndeye.github.io/ipa/icons/itorrent.png",
+      "version": "2.2.0.1",
+      "versionDate": "2026-07-19",
+      "size": 24288935,
+      "downloadURL": "https://github.com/XITRIX/iTorrent/releases/download/v2.2.0-1/iTorrent.ipa",
+      "versions": [
+        {
+          "version": "2.2.0.1",
+          "date": "2026-07-19",
+          "downloadURL": "https://github.com/XITRIX/iTorrent/releases/download/v2.2.0-1/iTorrent.ipa",
+          "size": 24288935
+        },
+        {
+          "version": "2.1.1.1",
+          "date": "2025-12-18",
+          "downloadURL": "https://github.com/XITRIX/iTorrent/releases/download/v2.1.1-1/iTorrent.ipa",
+          "size": 8362011
+        },
+        {
+          "version": "2.1.0.1",
+          "date": "2025-10-25",
+          "downloadURL": "https://github.com/XITRIX/iTorrent/releases/download/v2.1.0-1/iTorrent.ipa",
+          "size": 7092275
+        },
+        {
+          "version": "2.0.15.1",
+          "date": "2025-09-21",
+          "downloadURL": "https://github.com/XITRIX/iTorrent/releases/download/v2.0.15-1/iTorrent.ipa",
+          "size": 7090878
+        },
+        {
+          "version": "2.0.14.1",
+          "date": "2024-11-29",
+          "downloadURL": "https://github.com/XITRIX/iTorrent/releases/download/v2.0.14-1/iTorrent.ipa",
+          "size": 7027297
+        }
+      ]
+    },
+    {
+      "name": "SkyStream",
+      "bundleIdentifier": "dev.akash.skystream",
+      "developerName": "akashdh11",
+      "subtitle": "基于扩展的影视聚合播放器，需自行添加视频源",
+      "localizedDescription": "基于扩展的影视聚合播放器，需自行添加视频源",
+      "iconURL": "https://xndeye.github.io/ipa/icons/skystream.png",
+      "version": "2.9.0",
+      "versionDate": "2026-10-17",
+      "size": 75949734,
+      "downloadURL": "https://github.com/akashdh11/skystream/releases/download/v2.9.0/skystream-ios-unsigned-v2.9.0.ipa",
+      "versions": [
+        {
+          "version": "2.9.0",
+          "date": "2026-10-17",
+          "downloadURL": "https://github.com/akashdh11/skystream/releases/download/v2.9.0/skystream-ios-unsigned-v2.9.0.ipa",
+          "size": 75949734
+        },
+        {
+          "version": "2.8.1",
+          "date": "2026-09-28",
+          "downloadURL": "https://github.com/akashdh11/skystream/releases/download/v2.8.1/skystream-ios-unsigned-v2.8.1.ipa",
+          "size": 35836423
+        },
+        {
+          "version": "2.8.0",
+          "date": "2026-09-21",
+          "downloadURL": "https://github.com/akashdh11/skystream/releases/download/v2.8.0/skystream-ios-unsigned-v2.8.0.ipa",
+          "size": 35682250
+        },
+        {
+          "version": "2.7.6",
+          "date": "2026-08-03",
+          "downloadURL": "https://github.com/akashdh11/skystream/releases/download/v2.7.6/skystream-ios-unsigned-v2.7.6.ipa",
+          "size": 91107856
+        },
+        {
+          "version": "2.6.0",
+          "date": "2026-07-15",
+          "downloadURL": "https://github.com/akashdh11/skystream/releases/download/v2.6.0/skystream-ios-unsigned-v2.6.0.ipa",
+          "size": 91920339
+        }
+      ]
+    },
+    {
+      "name": "MeloX",
+      "bundleIdentifier": "azki.moye.MeloX",
+      "developerName": "youshen2",
+      "subtitle": "原生 SwiftUI 网易云音乐第三方客户端，支持动态歌词",
+      "localizedDescription": "原生 SwiftUI 网易云音乐第三方客户端，支持动态歌词",
+      "iconURL": "https://xndeye.github.io/ipa/icons/melox.png",
+      "version": "1.4.1",
+      "versionDate": "2026-10-30",
+      "size": 30440912,
+      "downloadURL": "https://github.com/youshen2/MeloX/releases/download/v1.4.1/MeloX-iOS-unsigned.ipa",
+      "versions": [
+        {
+          "version": "1.4.1",
+          "date": "2026-10-30",
+          "downloadURL": "https://github.com/youshen2/MeloX/releases/download/v1.4.1/MeloX-iOS-unsigned.ipa",
+          "size": 30440912
+        },
+        {
+          "version": "1.4.0",
+          "date": "2026-10-24",
+          "downloadURL": "https://github.com/youshen2/MeloX/releases/download/v1.4.0/MeloX-iOS-unsigned.ipa",
+          "size": 30363506
+        },
+        {
+          "version": "1.3.0",
+          "date": "2026-10-16",
+          "downloadURL": "https://github.com/youshen2/MeloX/releases/download/v1.3.0/MeloX-iOS-unsigned.ipa",
+          "size": 27881976
+        },
+        {
+          "version": "1.2.1",
+          "date": "2026-09-05",
+          "downloadURL": "https://github.com/youshen2/MeloX/releases/download/v1.2.1/MeloX-iOS-unsigned.ipa",
+          "size": 27542233
+        },
+        {
+          "version": "1.2.0",
+          "date": "2026-08-21",
+          "downloadURL": "https://github.com/youshen2/MeloX/releases/download/v1.2.0/MeloX-iOS-unsigned.ipa",
+          "size": 27392740
+        }
+      ]
+    },
+    {
+      "name": "Beans Music",
+      "bundleIdentifier": "com.beans.app",
+      "developerName": "XIaodou0416",
+      "subtitle": "多平台音乐客户端，支持网易云、QQ 音乐与酷狗",
+      "localizedDescription": "多平台音乐客户端，支持网易云、QQ 音乐与酷狗",
+      "iconURL": "https://xndeye.github.io/ipa/icons/beansmusic.png",
+      "version": "1.6.6",
+      "versionDate": "2026-09-06",
+      "size": 8761833,
+      "downloadURL": "https://github.com/XIaodou0416/Beans-Music/releases/download/v1.6.6/Beans-unsigned.ipa",
+      "versions": [
+        {
+          "version": "1.6.6",
+          "date": "2026-09-06",
+          "downloadURL": "https://github.com/XIaodou0416/Beans-Music/releases/download/v1.6.6/Beans-unsigned.ipa",
+          "size": 8761833
+        }
+      ]
+    },
+    {
+      "name": "Aidoku",
+      "bundleIdentifier": "app.aidoku.Aidoku",
+      "developerName": "Aidoku",
+      "subtitle": "多源漫画阅读客户端，支持离线阅读与本地漫画",
+      "localizedDescription": "多源漫画阅读客户端，支持离线阅读与本地漫画",
+      "iconURL": "https://xndeye.github.io/ipa/icons/aidoku.png",
+      "version": "0.9.4",
+      "versionDate": "2026-10-16",
+      "size": 14753154,
+      "downloadURL": "https://github.com/Aidoku/Aidoku/releases/download/v0.9-4/Aidoku.ipa",
+      "versions": [
+        {
+          "version": "0.9.4",
+          "date": "2026-10-16",
+          "downloadURL": "https://github.com/Aidoku/Aidoku/releases/download/v0.9-4/Aidoku.ipa",
+          "size": 14753154
+        },
+        {
+          "version": "0.9",
+          "date": "2026-09-03",
+          "downloadURL": "https://github.com/Aidoku/Aidoku/releases/download/v0.9/Aidoku.ipa",
+          "size": 14731108
+        },
+        {
+          "version": "0.8.4",
+          "date": "2026-07-03",
+          "downloadURL": "https://github.com/Aidoku/Aidoku/releases/download/v0.8.4/Aidoku.ipa",
+          "size": 10136987
+        },
+        {
+          "version": "0.8.3",
+          "date": "2026-05-18",
+          "downloadURL": "https://github.com/Aidoku/Aidoku/releases/download/v0.8.3/Aidoku.ipa",
+          "size": 9287296
+        },
+        {
+          "version": "0.8.2",
+          "date": "2026-03-18",
+          "downloadURL": "https://github.com/Aidoku/Aidoku/releases/download/v0.8.2/Aidoku.ipa",
+          "size": 9119989
+        }
+      ]
+    },
+    {
+      "name": "Simple Live",
+      "bundleIdentifier": "com.xycz.simple-live",
+      "developerName": "June6699",
+      "subtitle": "直播聚合客户端，支持虎牙、斗鱼、B站、抖音和快手",
+      "localizedDescription": "直播聚合客户端，支持虎牙、斗鱼、B站、抖音和快手",
+      "iconURL": "https://xndeye.github.io/ipa/icons/simplelive.png",
+      "version": "1.13.2",
+      "versionDate": "2026-10-20",
+      "size": 35118814,
+      "downloadURL": "https://github.com/June6699/dart_simple_live/releases/download/v1.13.2/ios_no_sign.ipa",
+      "versions": [
+        {
+          "version": "1.13.2",
+          "date": "2026-10-20",
+          "downloadURL": "https://github.com/June6699/dart_simple_live/releases/download/v1.13.2/ios_no_sign.ipa",
+          "size": 35118814
+        },
+        {
+          "version": "1.13.1",
+          "date": "2026-09-25",
+          "downloadURL": "https://github.com/June6699/dart_simple_live/releases/download/v1.13.1/ios_no_sign.ipa",
+          "size": 35004780
+        },
+        {
+          "version": "1.12.8",
+          "date": "2026-08-19",
+          "downloadURL": "https://github.com/June6699/dart_simple_live/releases/download/v1.12.8/ios_no_sign.ipa",
+          "size": 31256179
+        },
+        {
+          "version": "1.12.7",
+          "date": "2026-07-24",
+          "downloadURL": "https://github.com/June6699/dart_simple_live/releases/download/v1.12.7/ios_no_sign.ipa",
+          "size": 31092611
+        },
+        {
+          "version": "1.12.6",
+          "date": "2026-06-17",
+          "downloadURL": "https://github.com/June6699/dart_simple_live/releases/download/v1.12.6/ios_no_sign.ipa",
+          "size": 30896989
+        }
+      ]
+    },
+    {
+      "name": "Breeze",
+      "bundleIdentifier": "com.zephyr.breeze",
+      "developerName": "deretame",
+      "subtitle": "插件式多源漫画阅读客户端",
+      "localizedDescription": "插件式多源漫画阅读客户端",
+      "iconURL": "https://xndeye.github.io/ipa/icons/breeze.png",
+      "version": "3.0.37",
+      "versionDate": "2026-10-31",
+      "size": 26431983,
+      "downloadURL": "https://github.com/deretame/Breeze/releases/download/v3.0.37/Breeze-iOS-v3.0.37.ipa",
+      "versions": [
+        {
+          "version": "3.0.37",
+          "date": "2026-10-31",
+          "downloadURL": "https://github.com/deretame/Breeze/releases/download/v3.0.37/Breeze-iOS-v3.0.37.ipa",
+          "size": 26431983
+        },
+        {
+          "version": "3.0.36",
+          "date": "2026-10-25",
+          "downloadURL": "https://github.com/deretame/Breeze/releases/download/v3.0.36/Breeze-iOS-v3.0.36.ipa",
+          "size": 26377539
+        },
+        {
+          "version": "3.0.35",
+          "date": "2026-10-18",
+          "downloadURL": "https://github.com/deretame/Breeze/releases/download/v3.0.35/Breeze-iOS-v3.0.35.ipa",
+          "size": 26309164
+        },
+        {
+          "version": "3.0.34",
+          "date": "2026-10-11",
+          "downloadURL": "https://github.com/deretame/Breeze/releases/download/v3.0.34/Breeze-iOS-v3.0.34.ipa",
+          "size": 26102438
+        },
+        {
+          "version": "3.0.33",
+          "date": "2026-09-28",
+          "downloadURL": "https://github.com/deretame/Breeze/releases/download/v3.0.33/Breeze-iOS-v3.0.33.ipa",
+          "size": 26000157
+        }
+      ]
+    },
+    {
+      "name": "AnimeFlow",
+      "bundleIdentifier": "com.ligg.animeflow",
+      "developerName": "openAnimeFlow",
+      "subtitle": "多源追番播放器，支持弹幕与 Bangumi 收藏同步",
+      "localizedDescription": "多源追番播放器，支持弹幕与 Bangumi 收藏同步",
+      "iconURL": "https://xndeye.github.io/ipa/icons/animeflow.png",
+      "version": "2.6.7",
+      "versionDate": "2026-11-02",
+      "size": 29378160,
+      "downloadURL": "https://github.com/openAnimeFlow/AnimeFlow/releases/download/v2.6.7/AnimeFlow-ios-2.6.7.ipa",
+      "versions": [
+        {
+          "version": "2.6.7",
+          "date": "2026-11-02",
+          "downloadURL": "https://github.com/openAnimeFlow/AnimeFlow/releases/download/v2.6.7/AnimeFlow-ios-2.6.7.ipa",
+          "size": 29378160
+        },
+        {
+          "version": "2.6.6",
+          "date": "2026-10-26",
+          "downloadURL": "https://github.com/openAnimeFlow/AnimeFlow/releases/download/v2.6.6/AnimeFlow-ios-2.6.6.ipa",
+          "size": 29290748
+        },
+        {
+          "version": "2.6.5",
+          "date": "2026-10-25",
+          "downloadURL": "https://github.com/openAnimeFlow/AnimeFlow/releases/download/v2.6.5/AnimeFlow-ios-2.6.5.ipa",
+          "size": 29290778
+        },
+        {
+          "version": "2.6.4",
+          "date": "2026-10-18",
+          "downloadURL": "https://github.com/openAnimeFlow/AnimeFlow/releases/download/v2.6.4/AnimeFlow-ios-2.6.4.ipa",
+          "size": 29497158
+        },
+        {
+          "version": "2.6.3",
+          "date": "2026-10-12",
+          "downloadURL": "https://github.com/openAnimeFlow/AnimeFlow/releases/download/v2.6.3/AnimeFlow-ios-2.6.3.ipa",
+          "size": 29429482
+        }
+      ]
+    }
+  ],
+  "news": []
+}
