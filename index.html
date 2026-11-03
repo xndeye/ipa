@@ -1,0 +1,387 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#f8f9fd">
+  <meta name="description" content="__SOURCE_DESCRIPTION__">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="__SOURCE_TITLE__">
+  <meta property="og:description" content="__SOURCE_DESCRIPTION__">
+  <meta property="og:image" content="__SOURCE_ICON__">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="__SOURCE_TITLE__">
+  <meta name="twitter:description" content="__SOURCE_DESCRIPTION__">
+  <meta name="twitter:image" content="__SOURCE_ICON__">
+  <title>__SOURCE_TITLE__</title>
+  <link rel="icon" id="favicon" type="image/png" href="__SOURCE_ICON__">
+  <link rel="apple-touch-icon" id="touch-icon" href="__SOURCE_ICON__">
+  <style>
+    :root {color-scheme:light; --bg:#f8f9fd; --ink:#151d35; --sub:#6d7890; --line:#e7eaf2; --brand:#5146d9; --brand2:#7769f0; --white:#fff; --shadow:0 14px 44px rgba(27,40,90,.055)}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","PingFang SC","Microsoft YaHei",sans-serif;-webkit-font-smoothing:antialiased}
+    a{color:inherit;text-decoration:none}
+    button,input{font:inherit}
+    button{cursor:pointer}
+    .container{width:min(1140px,calc(100% - 48px));margin:auto}
+    .nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .nav-left{display:flex;align-items:center;gap:12px;font-weight:760;font-size:17px;letter-spacing:-.4px}
+    .brand-icon{width:38px;height:38px;background:#5146d9;border-radius:12px;position:relative;display:grid;place-items:center;color:#fff;box-shadow:0 5px 14px rgba(79,70,220,.24);font-size:23px;font-weight:850}
+    .brand-icon::after{content:"";height:8px;width:8px;border:2px solid #ddd9ff;border-radius:50%;position:absolute;right:-3px;top:-4px;background:var(--bg)}
+    .nav-links{display:flex;align-items:center;gap:28px;color:#66718a;font-size:13px;font-weight:550}
+    .nav-links a:hover{color:var(--brand)}
+    .nav-github{border:1px solid #dce0ee;color:#27344e;border-radius:10px;padding:10px 15px;display:flex;gap:9px;align-items:center;background:rgba(255,255,255,.63)}
+    .nav-github svg{width:16px;height:16px}
+    .hero{margin-top:38px;position:relative;overflow:hidden;border:1px solid #e8e9f7;border-radius:28px;background:linear-gradient(108deg,#fff 0%,#fff 40%,#f1f0ff 100%);box-shadow:var(--shadow);min-height:410px;display:grid;grid-template-columns:minmax(0,1fr) 350px;align-items:center;padding:54px 64px 56px}
+    .hero:before{content:"";position:absolute;right:-80px;top:-180px;height:570px;width:570px;background:radial-gradient(circle,rgba(171,158,255,.25) 0%,rgba(171,158,255,0) 68%);pointer-events:none}
+    .hero-copy{position:relative;z-index:1}
+    .eyebrow{display:inline-flex;align-items:center;gap:8px;padding:7px 11px;border-radius:999px;background:#f0efff;border:1px solid #e3e0ff;color:#584de1;font-size:12px;font-weight:650}
+    .eyebrow-dot{height:6px;width:6px;border-radius:50%;background:#6658ff}
+    h1{margin:24px 0 18px;font-size:clamp(32px,3.6vw,47px);line-height:1.3;letter-spacing:-1.7px;font-weight:830}
+    h1 em{font-style:normal;color:var(--brand)}
+    .hero-desc{margin:0;color:#6e7992;font-size:15px;line-height:1.9;max-width:480px}
+    .hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+    .btn{display:inline-flex;justify-content:center;align-items:center;gap:10px;font-weight:680;font-size:13px;padding:13px 19px;border-radius:11px;border:1px solid #e0e4f0;min-height:45px;transition:transform .18s,box-shadow .18s}
+    .btn:hover{transform:translateY(-2px)}
+    .btn.primary{color:#fff;background:linear-gradient(140deg,var(--brand),var(--brand2));border-color:transparent;box-shadow:0 9px 20px rgba(80,71,222,.19)}
+    .btn.ghost{background:#fff;color:#34405b}
+    .btn svg{width:17px;height:17px}
+    .hero-graphic{position:relative;height:280px;display:flex;align-items:center;justify-content:center}
+    .orb{position:absolute;width:260px;height:260px;border-radius:100%;background:radial-gradient(circle at 32% 29%,#e7e3ff,rgba(175,166,255,.12) 70%);border:1px solid #dcd6ff;box-shadow:inset 0 0 45px #ece9ff}
+    .phone{position:relative;width:188px;height:273px;border:7px solid #1d2448;background:#f9f9ff;border-radius:31px;box-shadow:0 18px 35px rgba(26,30,87,.18),0 3px 8px rgba(26,30,87,.08);transform:rotate(7deg);padding:22px 12px 12px}
+    .phone:before{content:"";position:absolute;top:7px;left:57px;width:57px;height:13px;background:#1d2448;border-radius:10px}
+    .phone-title{font-size:10px;font-weight:780;margin:1px 0 13px;color:#323b66}
+    .phone-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}
+    .mini-icon{height:42px;border-radius:12px;display:grid;place-items:center;color:#fff;font-weight:800;font-size:17px}
+    .mini-icon:nth-child(1){background:#846af0}.mini-icon:nth-child(2){background:#21c4ae}.mini-icon:nth-child(3){background:#e1ae3d}.mini-icon:nth-child(4){background:#f26b9f}.mini-icon:nth-child(5){background:#4c83ee}.mini-icon:nth-child(6){background:#747ae7}.mini-icon:nth-child(7){background:#d97f76}.mini-icon:nth-child(8){background:#39af93}.mini-icon:nth-child(9){background:#7764d7}
+    .floating{position:absolute;background:#fff;border-radius:12px;box-shadow:0 11px 28px rgba(39,39,103,.14);padding:11px 14px;font-size:12px;font-weight:730;display:flex;align-items:center;gap:9px}
+    .floating.one{right:-9px;top:22px;transform:rotate(5deg)}
+    .floating.two{left:3px;bottom:15px;transform:rotate(-5deg)}
+    .floating .check{width:18px;height:18px;border-radius:50%;display:grid;place-items:center;background:#e8f8ed;color:#1c9e59;font-size:13px}
+    .float-chip{height:17px;width:17px;border-radius:5px;background:#f1e8ff;color:#7662df;display:grid;place-items:center}
+    .stats{display:flex;gap:0;margin:30px 0 52px;padding:0 10px}
+    .stat{flex:1;padding:2px 30px;border-right:1px solid #e1e5ed}
+    .stat:first-child{padding-left:15px}
+    .stat:last-child{border-right:0}
+    .stat-value{font-size:20px;font-weight:820;letter-spacing:-.4px;color:#303853}
+    .stat-label{font-size:12px;color:#8992a6;margin-top:5px}
+    .section-top{display:flex;align-items:end;justify-content:space-between;gap:18px;margin:0 0 22px}
+    h2{margin:0 0 7px;font-size:23px;font-weight:820;letter-spacing:-.55px}
+    .section-desc{color:#8a93a8;font-size:13px;margin:0}
+    .data-badge{font-size:11px;color:#7864aa;background:#f1edff;border:1px solid #e4def9;border-radius:99px;padding:6px 10px}
+    .filters{display:flex;gap:12px;align-items:center;justify-content:space-between;margin:0 0 22px;flex-wrap:wrap}
+    .tabs{display:flex;gap:6px;background:#edeff6;padding:5px;border-radius:12px}
+    .tab{background:transparent;border:0;color:#758097;font-size:12px;padding:9px 16px;border-radius:8px;font-weight:650}
+    .tab.active{color:#5146d9;background:#fff;box-shadow:0 2px 8px rgba(24,39,90,.06)}
+    .search{display:flex;align-items:center;gap:10px;min-width:230px;padding:10px 14px;background:#fff;border:1px solid #e3e7f0;border-radius:11px;color:#8a94a9}
+    .search svg{width:17px;height:17px;flex:0 0 auto}
+    .search input{width:100%;border:0;outline:0;background:transparent;color:var(--ink);font-size:13px}
+    .search input::placeholder{color:#9ba4b6}
+    .cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+    .app-card{position:relative;border-radius:18px;border:1px solid #e6e9f2;background:#fff;padding:22px;min-height:170px;box-shadow:0 4px 14px rgba(21,28,65,.025);display:flex;flex-direction:column;gap:14px;transition:transform .18s,border-color .18s,box-shadow .18s}
+    .app-card:hover{transform:translateY(-3px);border-color:#d2cff6;box-shadow:var(--shadow)}
+    .app-head{display:flex;align-items:center;gap:13px;min-width:0}
+    .app-icon{width:51px;height:51px;border-radius:13px;flex:0 0 auto;display:grid;place-items:center;overflow:hidden;position:relative;background:var(--icon-bg,#6b6bf0);box-shadow:0 3px 8px rgba(20,28,60,.1)}
+    .app-icon img{height:100%;width:100%;object-fit:cover;position:absolute;inset:0}
+    .brand-icon img{width:100%;height:100%;object-fit:cover;border-radius:12px}
+    .mini-icon{overflow:hidden}
+    .mini-icon img{width:100%;height:100%;object-fit:cover;border-radius:inherit}
+    .app-icon span{font-size:20px;font-weight:830;color:#fff;letter-spacing:-1px}
+    .app-title{font-weight:770;font-size:15px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+    .app-category{font-size:11px;color:#9a9eb2;margin-top:5px}
+    .app-sub{font-size:12px;color:#7f8ba0;line-height:1.6;margin:0;flex:1;min-height:38px}
+    .app-foot{display:flex;align-items:center;justify-content:space-between;gap:5px;font-size:11px;color:#9aa3b5}
+    .app-foot a{color:#5851c5;font-weight:650}
+    .app-foot a:hover{text-decoration:underline}
+    .empty{grid-column:1/-1;border:1px dashed #d9dff0;border-radius:16px;text-align:center;padding:60px 18px;color:#8a94a7;background:#fff}
+    .subscribe{margin-top:55px;padding:27px 30px;display:flex;align-items:center;justify-content:space-between;gap:25px;border:1px solid #dadbff;border-radius:20px;background:linear-gradient(110deg,#efeeff,#f7f6ff)}
+    .subscribe h3{margin:0 0 9px;font-size:18px;letter-spacing:-.35px}
+    .subscribe p{margin:0;color:#70799a;font-size:12px;line-height:1.8}
+    .subscribe-actions{display:flex;gap:9px;align-items:center;flex-wrap:wrap}
+    .url{background:#fff;border:1px solid #e2e0fa;padding:13px;border-radius:10px;font-size:12px;color:#5b529a;word-break:break-all}
+    .footer{padding:36px 0 32px;display:flex;justify-content:space-between;gap:15px;font-size:12px;color:#99a2b4}
+    .footer a:hover{color:var(--brand)}
+    .toast{position:fixed;bottom:24px;left:50%;z-index:10;transform:translate(-50%,20px);padding:12px 18px;border-radius:11px;background:#26304e;color:#fff;font-size:13px;box-shadow:0 12px 30px rgba(0,0,0,.15);opacity:0;pointer-events:none;transition:all .25s}
+    .toast.show{opacity:1;transform:translate(-50%,0)}
+    @media(max-width:900px){.hero{grid-template-columns:1fr 270px;padding:42px 36px}.phone{transform:rotate(7deg) scale(.92)}.hero-graphic{transform:scale(.92)}.cards{grid-template-columns:repeat(2,minmax(0,1fr))}.subscribe{flex-wrap:wrap}.stat{padding:2px 16px}}
+    @media(max-width:680px){.container{width:calc(100% - 30px)}.nav{height:67px}.nav-links a:not(.nav-github){display:none}.nav-github{padding:9px 12px}.hero{margin-top:17px;padding:35px 24px 30px;display:flex;flex-direction:column;align-items:stretch;border-radius:22px;min-height:0}.hero-graphic{height:235px;transform:scale(.82);margin:-1px 0 -21px}.hero h1{font-size:34px;line-height:1.3;letter-spacing:-1.3px;margin:21px 0 13px}.hero-desc{font-size:13px}.hero-actions{margin-top:24px}.btn{font-size:12px;padding:12px 16px}.stats{margin:25px 0 39px;padding:0}.stat{padding:0 10px}.stat:first-child{padding-left:4px}.stat-value{font-size:16px}.stat-label{font-size:10px;line-height:1.6}.section-top{align-items:start}h2{font-size:21px}.filters{display:block}.tabs{width:100%;justify-content:space-between;margin-bottom:11px}.tab{padding:9px 12px}.search{width:100%}.cards{grid-template-columns:1fr;gap:12px}.app-card{min-height:158px;padding:19px}.subscribe{margin-top:34px;padding:22px;display:block}.subscribe-actions{margin-top:17px}.url{width:100%}.footer{padding:28px 0;line-height:1.8}}
+    @media(prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;scroll-behavior:auto!important}}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="nav">
+      <a class="nav-left" href="#top" aria-label="软件源首页"><span class="brand-icon"><img id="site-mark" src="__SOURCE_ICON__" alt=""></span><span id="site-name">__SOURCE_NAME__</span></a>
+      <nav class="nav-links" aria-label="主导航">
+        <a href="#apps">应用列表</a>
+        <a href="#subscribe">订阅软件源</a>
+        <a class="nav-github" href="https://github.com/xndeye/ipa" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .9A11.1 11.1 0 0 0 8.5 22.5c.55.1.75-.24.75-.53v-2c-3.05.67-3.7-1.3-3.7-1.3-.5-1.3-1.22-1.65-1.22-1.65-1-.7.08-.68.08-.68 1.1.08 1.7 1.13 1.7 1.13.98 1.7 2.55 1.2 3.18.92.1-.7.38-1.2.7-1.47-2.43-.28-5-1.22-5-5.48 0-1.2.44-2.2 1.15-2.97-.12-.3-.5-1.42.11-2.94 0 0 .94-.3 3.06 1.14A10.65 10.65 0 0 1 12 6.55c.95 0 1.9.13 2.8.38 2.12-1.44 3.06-1.14 3.06-1.14.61 1.52.23 2.64.11 2.94.72.77 1.15 1.77 1.15 2.97 0 4.27-2.57 5.2-5.02 5.48.4.34.76.98.76 1.97v2.82c0 .29.2.64.76.53A11.1 11.1 0 0 0 12 .9Z"/></svg>GitHub</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-label="软件源介绍">
+        <div class="hero-copy">
+          <span class="eyebrow"><span class="eyebrow-dot"></span> 开源精选 · 自动更新</span>
+          <h1>发现好用的<br><em>iOS 开源应用</em></h1>
+          <p class="hero-desc" id="site-subtitle">__SOURCE_SUBTITLE__</p>
+          <div class="hero-actions">
+            <button class="btn primary" type="button" data-copy><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/></svg>复制订阅地址</button>
+            <a class="btn ghost" href="./source.json" target="_blank" rel="noopener noreferrer">查看源 JSON <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+        <div class="hero-graphic" aria-hidden="true">
+          <div class="orb"></div>
+          <div class="phone">
+            <div class="phone-title">My Apps</div>
+            <div class="phone-grid" id="featured-icons"></div>
+          </div>
+          <span class="floating one"><span class="check">✓</span> 开源应用集</span>
+          <span class="floating two"><span class="float-chip">↗</span> 直连上游下载</span>
+        </div>
+      </section>
+
+      <div class="stats" aria-label="软件源特点">
+        <div class="stat"><div class="stat-value" id="app-count">加载中…</div><div class="stat-label">持续整理的开源项目</div></div>
+        <div class="stat"><div class="stat-value">上游直链</div><div class="stat-label">安装包无需中转</div></div>
+        <div class="stat"><div class="stat-value">自动更新</div><div class="stat-label">同步 GitHub Releases</div></div>
+      </div>
+
+      <section id="apps">
+        <div class="section-top"><div><h2>应用列表</h2><p class="section-desc">为日常使用精选的开源 iOS 应用</p></div><span class="data-badge" id="data-state">读取中…</span></div>
+        <div class="filters">
+          <div class="tabs" role="group" aria-label="按类型筛选">
+            <button class="tab active" type="button" data-category="全部" aria-pressed="true">全部</button>
+            <button class="tab" type="button" data-category="影音" aria-pressed="false">影音</button>
+            <button class="tab" type="button" data-category="阅读" aria-pressed="false">阅读</button>
+            <button class="tab" type="button" data-category="工具" aria-pressed="false">工具</button>
+            <button class="tab" type="button" data-category="社区" aria-pressed="false">社区</button>
+          </div>
+          <label class="search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 5 5"/></svg><input id="search" type="search" placeholder="搜索应用名称或描述" autocomplete="off" aria-label="搜索应用"></label>
+        </div>
+        <div class="cards" id="cards" aria-live="polite"><div class="empty">正在读取应用信息…</div></div>
+      </section>
+
+      <section class="subscribe" id="subscribe">
+        <div><h3>添加到你常用的签名工具</h3><p>复制下方链接，在 Feather 或 AltStore 中添加软件源。<br>安装包由各项目的上游仓库提供。</p></div>
+        <div class="subscribe-actions"><code class="url" id="feed-url">读取中…</code><button class="btn primary" type="button" data-copy>复制地址</button></div>
+      </section>
+    </main>
+
+    <footer class="footer"><span>© <span id="footer-name">__SOURCE_NAME__</span> · 开源应用聚合目录</span><span>项目归各上游作者所有 · <a href="https://github.com/xndeye/ipa" target="_blank" rel="noopener noreferrer">GitHub 仓库 ↗</a></span></footer>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script>
+
+(() => {
+  'use strict';
+
+  // source.json 是页面和站点元数据的唯一数据源。
+  const sourceURL = new URL('./source.json', document.baseURI);
+  const $ = id => document.getElementById(id);
+  const colors = ['#6f61dc','#32b29f','#d79b51','#e1789b','#667ce0','#6870ca','#4597ac','#658aeb','#8b74cd','#d78564'];
+  let apps = [];
+  let activeCategory = '全部';
+  let toastTimer;
+
+  $('feed-url').textContent = sourceURL.href;
+  document.querySelectorAll('a[href="./source.json"]').forEach(a => a.href = sourceURL.href);
+
+  function safeURL(value) {
+    if (typeof value !== 'string' || !value.trim()) return '';
+    try {
+      const url = new URL(value);
+      return (url.protocol === 'https:' || url.protocol === 'http:') ? url.href : '';
+    } catch {
+      return '';
+    }
+  }
+
+  function upstreamFromDownload(download) {
+    try {
+      const url = new URL(download);
+      const match = url.hostname === 'github.com' && url.pathname.match(/^\/([^/]+)\/([^/]+)\/releases\/download\//);
+      return match ? 'https://github.com/' + match[1] + '/' + match[2] : '';
+    } catch {
+      return '';
+    }
+  }
+
+  function categoryOf(description) {
+    if (/漫画|阅读/.test(description)) return '阅读';
+    if (/酷安|社区|社交/.test(description)) return '社区';
+    if (/音乐|直播|视频|弹幕|番剧|影视|动漫|追番|播放/.test(description)) return '影音';
+    return '工具';
+  }
+
+  function element(tag, className, value) {
+    const node = document.createElement(tag);
+    if (className) node.className = className;
+    if (value !== undefined) node.textContent = value;
+    return node;
+  }
+
+  function iconImage(url) {
+    const src = safeURL(url);
+    if (!src) return null;
+    const img = element('img');
+    img.src = src;
+    img.alt = '';
+    img.loading = 'lazy';
+    img.decoding = 'async';
+    img.addEventListener('error', () => img.remove(), {once:true});
+    return img;
+  }
+
+  function applyMetadata(feed) {
+    const name = String(feed.name || '').trim();
+    if (!name) throw new Error('软件源缺少名称');
+    const subtitle = typeof feed.subtitle === 'string' ? feed.subtitle.trim() : '';
+    const description = [name, subtitle].filter(Boolean).join('：');
+    const title = name + ' · 开源 iOS 应用源';
+    const favicon = safeURL(feed.iconURL);
+    document.title = title;
+    document.querySelector('meta[name="description"]').content = description;
+    document.querySelector('meta[property="og:title"]').content = title;
+    document.querySelector('meta[property="og:description"]').content = description;
+    document.querySelector('meta[name="twitter:title"]').content = title;
+    document.querySelector('meta[name="twitter:description"]').content = description;
+    $('site-name').textContent = name;
+    $('footer-name').textContent = name;
+    $('site-subtitle').textContent = subtitle;
+    if (favicon) {
+      $('favicon').href = favicon;
+      $('touch-icon').href = favicon;
+      $('site-mark').src = favicon;
+      document.querySelector('meta[property="og:image"]').content = favicon;
+      document.querySelector('meta[name="twitter:image"]').content = favicon;
+    }
+  }
+
+  function renderFeatured() {
+    const grid = $('featured-icons');
+    const fragment = document.createDocumentFragment();
+    apps.slice(0, 9).forEach((app, index) => {
+      const square = element('span', 'mini-icon', app.name.slice(0, 1).toUpperCase());
+      square.style.background = colors[index % colors.length];
+      const icon = iconImage(app.iconURL);
+      if (icon) square.appendChild(icon);
+      fragment.appendChild(square);
+    });
+    grid.replaceChildren(fragment);
+  }
+
+  function render() {
+    const query = $('search').value.trim().toLocaleLowerCase();
+    const visible = apps.filter(app =>
+      (activeCategory === '全部' || app.category === activeCategory) &&
+      (!query || [app.name, app.description, app.developerName, app.version].join(' ').toLocaleLowerCase().includes(query))
+    );
+    const fragment = document.createDocumentFragment();
+    for (const app of visible) {
+      const card = element('article', 'app-card');
+      const head = element('div', 'app-head');
+      const square = element('div', 'app-icon');
+      square.style.setProperty('--icon-bg', colors[app.index % colors.length]);
+      square.appendChild(element('span', '', app.name.slice(0, 1).toUpperCase()));
+      const img = iconImage(app.iconURL);
+      if (img) square.appendChild(img);
+      head.appendChild(square);
+      const details = element('div');
+      details.style.minWidth = '0';
+      details.appendChild(element('div', 'app-title', app.name));
+      details.appendChild(element('div', 'app-category', app.category + (app.version ? ' · v' + app.version : '')));
+      head.appendChild(details);
+      card.appendChild(head);
+      card.appendChild(element('p', 'app-sub', app.description));
+      const foot = element('div', 'app-foot');
+      foot.appendChild(element('span', '', app.developerName || '开源项目'));
+      const url = upstreamFromDownload(app.downloadURL) || app.downloadURL;
+      if (url) {
+        const link = element('a', '', upstreamFromDownload(app.downloadURL) ? '查看上游 ↗' : '下载 IPA ↗');
+        link.href = url;
+        link.target = '_blank';
+        link.rel = 'noopener noreferrer';
+        foot.appendChild(link);
+      }
+      card.appendChild(foot);
+      fragment.appendChild(card);
+    }
+    if (!visible.length) {
+      fragment.appendChild(element('div', 'empty', '没有找到匹配的应用，请尝试其他关键词。'));
+    }
+    $('cards').replaceChildren(fragment);
+  }
+
+  function toast(message) {
+    const box = $('toast');
+    box.textContent = message;
+    box.classList.add('show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => box.classList.remove('show'), 2200);
+  }
+
+  async function copySource() {
+    try {
+      await navigator.clipboard.writeText(sourceURL.href);
+      toast('订阅地址已复制');
+    } catch {
+      const field = element('textarea');
+      field.value = sourceURL.href;
+      field.style.cssText = 'position:fixed;opacity:0';
+      document.body.appendChild(field);
+      field.select();
+      const copied = document.execCommand('copy');
+      field.remove();
+      toast(copied ? '订阅地址已复制' : '请手动复制页面中的订阅地址');
+    }
+  }
+
+  document.querySelectorAll('[data-copy]').forEach(button => button.addEventListener('click', copySource));
+  document.querySelectorAll('[data-category]').forEach(button => button.addEventListener('click', () => {
+    activeCategory = button.dataset.category;
+    document.querySelectorAll('[data-category]').forEach(tab => {
+      tab.classList.toggle('active', tab === button);
+      tab.setAttribute('aria-pressed', String(tab === button));
+    });
+    render();
+  }));
+  $('search').addEventListener('input', render);
+
+  async function load() {
+    const response = await fetch(sourceURL.href, {cache: 'no-store'});
+    if (!response.ok) throw new Error('无法读取源 JSON：HTTP ' + response.status);
+    const feed = await response.json();
+    if (!feed || !Array.isArray(feed.apps)) throw new Error('软件源缺少 apps 数组');
+    applyMetadata(feed);
+    apps = feed.apps.map((app, index) => {
+      const name = String(app.name || '').trim();
+      const description = String(app.subtitle || app.localizedDescription || '').trim();
+      return {
+        index,
+        name,
+        description,
+        developerName: String(app.developerName || ''),
+        iconURL: app.iconURL,
+        version: String(app.version || ''),
+        downloadURL: safeURL(app.downloadURL),
+        category: categoryOf(description)
+      };
+    }).filter(app => app.name);
+    $('app-count').textContent = apps.length + ' 款应用';
+    $('data-state').textContent = '实时读取软件源';
+    renderFeatured();
+    render();
+  }
+
+  load().catch(error => {
+    console.error('软件源加载失败：', error);
+    $('data-state').textContent = '软件源暂时不可用';
+    $('cards').replaceChildren(element('div', 'empty', '应用列表加载失败，请刷新页面重试。'));
+    $('app-count').textContent = '—';
+  });
+})();
+</script>
+</body>
+</html>
