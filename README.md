@@ -31,6 +31,10 @@ https://raw.githubusercontent.com/xndeye/ipa/release/source.json
 | SkyStream | [akashdh11/skystream](https://github.com/akashdh11/skystream) |
 | MeloX | [youshen2/MeloX](https://github.com/youshen2/MeloX) |
 | Beans Music | [XIaodou0416/Beans-Music](https://github.com/XIaodou0416/Beans-Music) |
+| Aidoku | [Aidoku/Aidoku](https://github.com/Aidoku/Aidoku) |
+| Simple Live | [June6699/dart_simple_live](https://github.com/June6699/dart_simple_live) |
+| Breeze | [deretame/Breeze](https://github.com/deretame/Breeze) |
+| AnimeFlow | [openAnimeFlow/AnimeFlow](https://github.com/openAnimeFlow/AnimeFlow) |
 
 [^pl]: IPA 标记为 `trollstore`，普通证书签名的兼容性未验证。
 [^it]: 官方仅明确支持 AltStore / SideStore，Feather 兼容性无官方保证。
