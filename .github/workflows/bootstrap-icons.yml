@@ -28,6 +28,7 @@ jobs:
           import time
           from pathlib import Path
           from urllib.request import Request, urlopen
+          from urllib.parse import quote
           from PIL import Image
 
           images = {
@@ -54,7 +55,7 @@ jobs:
           output = Path("icons")
           output.mkdir(exist_ok=True)
           for name, (repo, revision, path) in images.items():
-              url = f"https://raw.githubusercontent.com/{repo}/{revision}/{path}"
+              url = f"https://raw.githubusercontent.com/{repo}/{revision}/{quote(path, safe='/')}"
               for attempt in range(3):
                   try:
                       request = Request(url, headers={"User-Agent": "xndeye-ipa-icons"})
