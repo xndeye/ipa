@@ -11,6 +11,7 @@
 """
 import json
 import logging
+from html import escape
 import os
 import re
 import shutil
@@ -50,6 +51,8 @@ MAX_WORKERS = 8  # 并发请求线程数上限
 # 源顶层需要原样从配置中复制的字段
 FEED_KEYS = ("name", "identifier", "subtitle", "iconURL")
 OUTPUT_FILE = Path("output") / "source.json"
+INDEX_TEMPLATE = Path("index.html")
+INDEX_OUTPUT = OUTPUT_FILE.parent / "index.html"
 ICON_SOURCE_DIR = Path("icons")
 ICON_OUTPUT_DIR = OUTPUT_FILE.parent / "icons"
 
@@ -272,6 +275,30 @@ def publish_icons(sources: list[Source]) -> None:
         shutil.copyfile(icon, ICON_OUTPUT_DIR / icon.name)
 
 
+
+def publish_index(feed: dict[str, Any]) -> None:
+    """用同一份 source.json 数据填充静态页面元信息，兼容无 JS 的页面预览。"""
+    name = str(feed["name"])
+    subtitle = str(feed.get("subtitle") or "")
+    title = f"{name} · 开源 iOS 应用源"
+    description = f"{name}：{subtitle}" if subtitle else name
+    icon = str(feed.get("iconURL") or "")
+    replacements = {
+        "__SOURCE_TITLE__": title,
+        "__SOURCE_DESCRIPTION__": description,
+        "__SOURCE_NAME__": name,
+        "__SOURCE_SUBTITLE__": subtitle,
+        "__SOURCE_ICON__": icon,
+    }
+    html = INDEX_TEMPLATE.read_text(encoding="utf-8")
+    for placeholder, value in replacements.items():
+        if placeholder not in html:
+            raise ValueError(f"HTML 模板缺少占位符：{placeholder}")
+        html = html.replace(placeholder, escape(value, quote=True))
+    INDEX_OUTPUT.parent.mkdir(parents=True, exist_ok=True)
+    INDEX_OUTPUT.write_text(html, encoding="utf-8")
+
+
 def write_feed(feed: dict[str, Any]) -> None:
     """原子写入：先写临时文件再替换，避免中途失败留下残缺的 JSON。"""
     OUTPUT_FILE.parent.mkdir(parents=True, exist_ok=True)
@@ -311,6 +338,7 @@ def main() -> int:
     feed = {key: CONFIG[key] for key in FEED_KEYS}
     feed.update(apps=apps, news=[])
     publish_icons(sources)
+    publish_index(feed)
     write_feed(feed)
     logger.info("已生成 %s（共 %d 个应用）", OUTPUT_FILE, len(apps))
     return 0
