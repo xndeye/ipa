@@ -8,10 +8,6 @@ Feather / AltStore 软件源，下载直连上游 Releases。
 https://xndeye.github.io/ipa/source.json
 ```
 
-```
-https://raw.githubusercontent.com/xndeye/ipa/release/source.json
-```
-
 ## Apps
 
 | 应用 | 上游 |
