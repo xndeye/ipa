@@ -47,19 +47,8 @@
     .btn.primary{color:#fff;background:linear-gradient(140deg,var(--brand),var(--brand2));border-color:transparent;box-shadow:0 9px 20px rgba(80,71,222,.19)}
     .btn.ghost{background:#fff;color:#34405b}
     .btn svg{width:17px;height:17px}
-    .hero-graphic{position:relative;height:280px;display:flex;align-items:center;justify-content:center}
-    .orb{position:absolute;width:260px;height:260px;border-radius:100%;background:radial-gradient(circle at 32% 29%,#e7e3ff,rgba(175,166,255,.12) 70%);border:1px solid #dcd6ff;box-shadow:inset 0 0 45px #ece9ff}
-    .phone{position:relative;width:188px;height:273px;border:7px solid #1d2448;background:#f9f9ff;border-radius:31px;box-shadow:0 18px 35px rgba(26,30,87,.18),0 3px 8px rgba(26,30,87,.08);transform:rotate(7deg);padding:22px 12px 12px}
-    .phone:before{content:"";position:absolute;top:7px;left:57px;width:57px;height:13px;background:#1d2448;border-radius:10px}
-    .phone-title{font-size:10px;font-weight:780;margin:1px 0 13px;color:#323b66}
-    .phone-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}
-    .mini-icon{height:42px;border-radius:12px;display:grid;place-items:center;color:#fff;font-weight:800;font-size:17px}
-    .mini-icon:nth-child(1){background:#846af0}.mini-icon:nth-child(2){background:#21c4ae}.mini-icon:nth-child(3){background:#e1ae3d}.mini-icon:nth-child(4){background:#f26b9f}.mini-icon:nth-child(5){background:#4c83ee}.mini-icon:nth-child(6){background:#747ae7}.mini-icon:nth-child(7){background:#d97f76}.mini-icon:nth-child(8){background:#39af93}.mini-icon:nth-child(9){background:#7764d7}
-    .floating{position:absolute;background:#fff;border-radius:12px;box-shadow:0 11px 28px rgba(39,39,103,.14);padding:11px 14px;font-size:12px;font-weight:730;display:flex;align-items:center;gap:9px}
-    .floating.one{right:-9px;top:22px;transform:rotate(5deg)}
-    .floating.two{left:3px;bottom:15px;transform:rotate(-5deg)}
-    .floating .check{width:18px;height:18px;border-radius:50%;display:grid;place-items:center;background:#e8f8ed;color:#1c9e59;font-size:13px}
-    .float-chip{height:17px;width:17px;border-radius:5px;background:#f1e8ff;color:#7662df;display:grid;place-items:center}
+    .hero-graphic{position:relative;min-height:300px;display:flex;align-items:center;justify-content:center}
+    .hero-graphic svg{display:block;width:min(100%,400px);height:auto;max-height:350px;overflow:visible}
     .stats{display:flex;gap:0;margin:30px 0 52px;padding:0 10px}
     .stat{flex:1;padding:2px 30px;border-right:1px solid #e1e5ed}
     .stat:first-child{padding-left:15px}
@@ -85,8 +74,6 @@
     .app-icon{width:51px;height:51px;border-radius:13px;flex:0 0 auto;display:grid;place-items:center;overflow:hidden;position:relative;background:var(--icon-bg,#6b6bf0);box-shadow:0 3px 8px rgba(20,28,60,.1)}
     .app-icon img{height:100%;width:100%;object-fit:cover;position:absolute;inset:0}
     .brand-icon img{width:100%;height:100%;object-fit:cover;border-radius:12px}
-    .mini-icon{overflow:hidden}
-    .mini-icon img{width:100%;height:100%;object-fit:cover;border-radius:inherit}
     .app-icon span{font-size:20px;font-weight:830;color:#fff;letter-spacing:-1px}
     .app-title{font-weight:770;font-size:15px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
     .app-category{font-size:11px;color:#9a9eb2;margin-top:5px}
@@ -95,17 +82,19 @@
     .app-foot a{color:#5851c5;font-weight:650}
     .app-foot a:hover{text-decoration:underline}
     .empty{grid-column:1/-1;border:1px dashed #d9dff0;border-radius:16px;text-align:center;padding:60px 18px;color:#8a94a7;background:#fff}
-    .subscribe{margin-top:55px;padding:27px 30px;display:flex;align-items:center;justify-content:space-between;gap:25px;border:1px solid #dadbff;border-radius:20px;background:linear-gradient(110deg,#efeeff,#f7f6ff)}
-    .subscribe h3{margin:0 0 9px;font-size:18px;letter-spacing:-.35px}
-    .subscribe p{margin:0;color:#70799a;font-size:12px;line-height:1.8}
-    .subscribe-actions{display:flex;gap:9px;align-items:center;flex-wrap:wrap}
-    .url{background:#fff;border:1px solid #e2e0fa;padding:13px;border-radius:10px;font-size:12px;color:#5b529a;word-break:break-all}
+    .contribute{margin-top:55px;padding:31px 33px;display:flex;align-items:center;justify-content:space-between;gap:28px;border:1px solid #dadbff;border-radius:20px;background:linear-gradient(110deg,#efeeff,#f7f6ff)}
+    .contribute-kicker{display:inline-flex;align-items:center;gap:7px;margin-bottom:9px;color:#6758cf;font-size:11px;font-weight:700;letter-spacing:.04em}
+    .contribute-kicker::before{content:"";width:7px;height:7px;border-radius:50%;background:#8270ee;box-shadow:0 0 0 3px #e6e1ff}
+    .contribute h3{margin:0 0 9px;font-size:19px;letter-spacing:-.35px}
+    .contribute p{max-width:560px;margin:0;color:#70799a;font-size:12px;line-height:1.85}
+    .contribute-actions{display:flex;gap:10px;align-items:center;flex-wrap:wrap;flex-shrink:0}
+    .contribute-actions .btn{white-space:nowrap}
     .footer{padding:36px 0 32px;display:flex;justify-content:space-between;gap:15px;font-size:12px;color:#99a2b4}
     .footer a:hover{color:var(--brand)}
     .toast{position:fixed;bottom:24px;left:50%;z-index:10;transform:translate(-50%,20px);padding:12px 18px;border-radius:11px;background:#26304e;color:#fff;font-size:13px;box-shadow:0 12px 30px rgba(0,0,0,.15);opacity:0;pointer-events:none;transition:all .25s}
     .toast.show{opacity:1;transform:translate(-50%,0)}
-    @media(max-width:900px){.hero{grid-template-columns:1fr 270px;padding:42px 36px}.phone{transform:rotate(7deg) scale(.92)}.hero-graphic{transform:scale(.92)}.cards{grid-template-columns:repeat(2,minmax(0,1fr))}.subscribe{flex-wrap:wrap}.stat{padding:2px 16px}}
-    @media(max-width:680px){.container{width:calc(100% - 30px)}.nav{height:67px}.nav-links a:not(.nav-github){display:none}.nav-github{padding:9px 12px}.hero{margin-top:17px;padding:35px 24px 30px;display:flex;flex-direction:column;align-items:stretch;border-radius:22px;min-height:0}.hero-graphic{height:235px;transform:scale(.82);margin:-1px 0 -21px}.hero h1{font-size:34px;line-height:1.3;letter-spacing:-1.3px;margin:21px 0 13px}.hero-desc{font-size:13px}.hero-actions{margin-top:24px}.btn{font-size:12px;padding:12px 16px}.stats{margin:25px 0 39px;padding:0}.stat{padding:0 10px}.stat:first-child{padding-left:4px}.stat-value{font-size:16px}.stat-label{font-size:10px;line-height:1.6}.section-top{align-items:start}h2{font-size:21px}.filters{display:block}.tabs{width:100%;justify-content:space-between;margin-bottom:11px}.tab{padding:9px 12px}.search{width:100%}.cards{grid-template-columns:1fr;gap:12px}.app-card{min-height:158px;padding:19px}.subscribe{margin-top:34px;padding:22px;display:block}.subscribe-actions{margin-top:17px}.url{width:100%}.footer{padding:28px 0;line-height:1.8}}
+    @media(max-width:900px){.hero{grid-template-columns:1fr 270px;padding:42px 36px}.cards{grid-template-columns:repeat(2,minmax(0,1fr))}.contribute{flex-wrap:wrap}.stat{padding:2px 16px}}
+    @media(max-width:680px){.container{width:calc(100% - 30px)}.nav{height:67px}.nav-links a:not(.nav-github){display:none}.nav-github{padding:9px 12px}.hero{margin-top:17px;padding:35px 24px 30px;display:flex;flex-direction:column;align-items:stretch;border-radius:22px;min-height:0}.hero-graphic{height:auto;min-height:0;transform:none;margin:7px -8px -10px}.hero-graphic svg{width:min(100%,340px);max-height:none}.hero h1{font-size:34px;line-height:1.3;letter-spacing:-1.3px;margin:21px 0 13px}.hero-desc{font-size:13px}.hero-actions{margin-top:24px}.btn{font-size:12px;padding:12px 16px}.stats{margin:25px 0 39px;padding:0}.stat{padding:0 10px}.stat:first-child{padding-left:4px}.stat-value{font-size:16px}.stat-label{font-size:10px;line-height:1.6}.section-top{align-items:start}h2{font-size:21px}.filters{display:block}.tabs{width:100%;justify-content:space-between;margin-bottom:11px}.tab{padding:9px 12px}.search{width:100%}.cards{grid-template-columns:1fr;gap:12px}.app-card{min-height:158px;padding:19px}.contribute{margin-top:34px;padding:22px;display:block}.contribute-actions{margin-top:18px}.contribute-actions .btn{flex:1}.footer{padding:28px 0;line-height:1.8}}
     @media(prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;scroll-behavior:auto!important}}
   </style>
 </head>
@@ -115,7 +104,7 @@
       <a class="nav-left" href="#top" aria-label="软件源首页"><span class="brand-icon"><img id="site-mark" src="__SOURCE_ICON__" alt=""></span><span id="site-name">__SOURCE_NAME__</span></a>
       <nav class="nav-links" aria-label="主导航">
         <a href="#apps">应用列表</a>
-        <a href="#subscribe">订阅软件源</a>
+        <a href="#contribute">推荐应用</a>
         <a class="nav-github" href="https://github.com/xndeye/ipa" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .9A11.1 11.1 0 0 0 8.5 22.5c.55.1.75-.24.75-.53v-2c-3.05.67-3.7-1.3-3.7-1.3-.5-1.3-1.22-1.65-1.22-1.65-1-.7.08-.68.08-.68 1.1.08 1.7 1.13 1.7 1.13.98 1.7 2.55 1.2 3.18.92.1-.7.38-1.2.7-1.47-2.43-.28-5-1.22-5-5.48 0-1.2.44-2.2 1.15-2.97-.12-.3-.5-1.42.11-2.94 0 0 .94-.3 3.06 1.14A10.65 10.65 0 0 1 12 6.55c.95 0 1.9.13 2.8.38 2.12-1.44 3.06-1.14 3.06-1.14.61 1.52.23 2.64.11 2.94.72.77 1.15 1.77 1.15 2.97 0 4.27-2.57 5.2-5.02 5.48.4.34.76.98.76 1.97v2.82c0 .29.2.64.76.53A11.1 11.1 0 0 0 12 .9Z"/></svg>GitHub</a>
       </nav>
     </header>
@@ -132,13 +121,137 @@
           </div>
         </div>
         <div class="hero-graphic" aria-hidden="true">
-          <div class="orb"></div>
-          <div class="phone">
-            <div class="phone-title">My Apps</div>
-            <div class="phone-grid" id="featured-icons"></div>
-          </div>
-          <span class="floating one"><span class="check">✓</span> 开源应用集</span>
-          <span class="floating two"><span class="float-chip">↗</span> 直连上游下载</span>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 510" role="img" aria-labelledby="title desc">
+          <title id="title">开源 iOS 应用汇集与自动同步</title>
+          <desc id="desc">悬浮的应用卡片汇集到一部手机，环绕同步、下载与安全状态的视觉元素。</desc>
+          <defs>
+            <radialGradient id="halo" cx="50%" cy="49%" r="53%">
+              <stop stop-color="#e2dcff"/>
+              <stop offset=".54" stop-color="#eeeaff" stop-opacity=".84"/>
+              <stop offset="1" stop-color="#f3f0ff" stop-opacity="0"/>
+            </radialGradient>
+            <linearGradient id="phone" x1="0" x2="1" y2="1">
+              <stop stop-color="#3a4481"/><stop offset=".46" stop-color="#1e285a"/><stop offset="1" stop-color="#111a3e"/>
+            </linearGradient>
+            <linearGradient id="screen" x1=".1" y1="0" x2=".95" y2="1">
+              <stop stop-color="#ffffff"/><stop offset="1" stop-color="#f2f4ff"/>
+            </linearGradient>
+            <linearGradient id="violet" x1="0" x2="1" y2="1">
+              <stop stop-color="#8e81ff"/><stop offset="1" stop-color="#5949e6"/>
+            </linearGradient>
+            <linearGradient id="teal" x1="0" x2="1" y2="1">
+              <stop stop-color="#5dd5cf"/><stop offset="1" stop-color="#22a5a8"/>
+            </linearGradient>
+            <linearGradient id="blue" x1="0" x2="1" y2="1">
+              <stop stop-color="#9ac8ff"/><stop offset="1" stop-color="#5289ec"/>
+            </linearGradient>
+            <linearGradient id="pink" x1="0" x2="1" y2="1">
+              <stop stop-color="#ffa9c5"/><stop offset="1" stop-color="#e86f9e"/>
+            </linearGradient>
+            <linearGradient id="gold" x1="0" x2="1" y2="1">
+              <stop stop-color="#ffdf9f"/><stop offset="1" stop-color="#e7ad54"/>
+            </linearGradient>
+            <linearGradient id="card" x1="0" x2=".9" y2="1">
+              <stop stop-color="#fff"/><stop offset="1" stop-color="#fbfbff"/>
+            </linearGradient>
+            <filter id="shadow" x="-45%" y="-45%" width="190%" height="210%">
+              <feDropShadow dx="0" dy="16" stdDeviation="15" flood-color="#52529a" flood-opacity=".14"/>
+            </filter>
+            <filter id="deepShadow" x="-50%" y="-40%" width="200%" height="200%">
+              <feDropShadow dx="5" dy="22" stdDeviation="18" flood-color="#292e70" flood-opacity=".26"/>
+            </filter>
+            <filter id="smallShadow" x="-50%" y="-50%" width="200%" height="200%">
+              <feDropShadow dx="0" dy="8" stdDeviation="9" flood-color="#5a64a8" flood-opacity=".17"/>
+            </filter>
+          </defs>
+          <!-- Soft orbit -->
+          <circle cx="300" cy="255" r="235" fill="url(#halo)"/>
+          <ellipse cx="297" cy="255" rx="234" ry="176" fill="none" stroke="#cbc7fb" stroke-opacity=".7" stroke-width="1.5" stroke-dasharray="5 10" transform="rotate(-18 297 255)"/>
+          <ellipse cx="303" cy="246" rx="194" ry="222" fill="none" stroke="#dad5ff" stroke-opacity=".7" stroke-width="1.4" transform="rotate(24 303 246)"/>
+          <path d="M66 279 C126 297 158 312 177 339" stroke="#aaa0f6" stroke-width="2" stroke-linecap="round" stroke-dasharray="2 9" fill="none" opacity=".72"/>
+          <path d="M427 151 C482 150 522 179 531 211" stroke="#aaa0f6" stroke-width="2" stroke-linecap="round" stroke-dasharray="2 9" fill="none" opacity=".72"/>
+          <circle cx="92" cy="247" r="7" fill="#9186ef" opacity=".55"/>
+          <circle cx="503" cy="308" r="6" fill="#6cbbdf" opacity=".48"/>
+          <circle cx="501" cy="80" r="4" fill="#b9a9fa"/>
+          <circle cx="94" cy="80" r="5" fill="#a7b6f8"/>
+          <path d="M108 151v17m-8-8.5h17M501 377v15m-8-7.5h16" stroke="#a99df0" stroke-width="2.2" stroke-linecap="round" opacity=".75"/>
+          
+          <!-- Rear app platform card -->
+          <g filter="url(#shadow)" transform="translate(63 103) rotate(-10 112 57)">
+            <rect width="210" height="115" rx="24" fill="url(#card)" stroke="#e8e6ff"/>
+            <rect x="18" y="20" width="65" height="75" rx="20" fill="#eee9ff"/>
+            <rect x="27" y="29" width="47" height="57" rx="15" fill="url(#violet)"/>
+            <path d="M50 44v25m0 0-9-9m9 9 9-9" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+            <rect x="100" y="32" width="91" height="9" rx="4.5" fill="#3b4270"/>
+            <rect x="100" y="51" width="70" height="7" rx="3.5" fill="#d3d6ec"/>
+            <rect x="100" y="68" width="48" height="7" rx="3.5" fill="#e4e6f2"/>
+            <rect x="100" y="89" width="46" height="7" rx="3.5" fill="#eaeafa"/>
+          </g>
+          
+          <!-- Central phone -->
+          <g transform="rotate(8 315 270)" filter="url(#deepShadow)">
+            <rect x="196" y="40" width="240" height="430" rx="45" fill="url(#phone)"/>
+            <rect x="204" y="48" width="224" height="413" rx="38" fill="url(#screen)"/>
+            <path d="M280 49h72c5 0 9 3 9 8v9c0 6-4 10-10 10h-69c-6 0-10-4-10-10V57c0-4 4-8 8-8" fill="#172044"/>
+            <rect x="220" y="100" width="96" height="12" rx="6" fill="#313b70"/>
+            <rect x="220" y="121" width="154" height="7" rx="3.5" fill="#d4d9ed"/>
+            <rect x="220" y="138" width="117" height="6" rx="3" fill="#e7eafb"/>
+            <!-- six app tiles -->
+            <g transform="translate(220 169)">
+              <rect width="59" height="59" rx="17" fill="url(#violet)"/>
+              <rect x="68" width="59" height="59" rx="17" fill="url(#teal)"/>
+              <rect x="136" width="59" height="59" rx="17" fill="url(#blue)"/>
+              <rect y="70" width="59" height="59" rx="17" fill="url(#pink)"/>
+              <rect x="68" y="70" width="59" height="59" rx="17" fill="url(#gold)"/>
+              <rect x="136" y="70" width="59" height="59" rx="17" fill="#7b77e4"/>
+              <!-- play -->
+              <path d="m23 18 22 12-22 12z" fill="white" opacity=".94"/>
+              <!-- music -->
+              <path d="M106 15v30m0-30-18 4v21" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="89" cy="42" r="5" fill="white"/><circle cx="106" cy="45" r="5" fill="white"/>
+              <!-- book -->
+              <path d="M147 19c9-4 16-3 19 1 3-4 11-5 19-1v26c-9-3-16-3-19 2-4-5-12-5-19-2z" stroke="white" stroke-width="3" fill="none" stroke-linejoin="round"/>
+              <path d="M166 20v27" stroke="white" stroke-width="2.5" opacity=".9"/>
+              <!-- chat -->
+              <path d="M13 96q0-13 17-13t17 13q0 13-17 13h-6l-9 7 2-11q-4-4-4-9" stroke="white" stroke-width="3" fill="none" stroke-linejoin="round"/>
+              <g fill="white"><circle cx="23" cy="96" r="2"/><circle cx="30" cy="96" r="2"/><circle cx="37" cy="96" r="2"/></g>
+              <!-- bolt -->
+              <path d="M102 83 85 105h14l-5 18 22-25h-14l8-15z" fill="white"/>
+              <!-- terminal -->
+              <path d="m147 90 12 11-12 11M165 112h22" stroke="white" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            </g>
+            <rect x="220" y="327" width="196" height="86" rx="18" fill="#fff" stroke="#e6e9fa"/>
+            <circle cx="250" cy="355" r="16" fill="#e5f7f2"/>
+            <path d="m242 355 6 6 11-12" fill="none" stroke="#36b79d" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+            <rect x="279" y="344" width="102" height="8" rx="4" fill="#3d4677"/>
+            <rect x="279" y="360" width="73" height="6" rx="3" fill="#d4d9ec"/>
+            <rect x="235" y="387" width="165" height="7" rx="3.5" fill="#edf0f9"/>
+            <rect x="235" y="387" width="113" height="7" rx="3.5" fill="url(#violet)"/>
+            <rect x="283" y="441" width="65" height="5" rx="2.5" fill="#9ea6c3" opacity=".75"/>
+          </g>
+          
+          <!-- Right glass status card -->
+          <g filter="url(#shadow)" transform="translate(407 113) rotate(9 73 54)">
+            <rect width="151" height="106" rx="22" fill="#fff" stroke="#e4e7fb"/>
+            <circle cx="38" cy="34" r="20" fill="#def6ec"/>
+            <path d="m28 34 7 7 15-16" fill="none" stroke="#25b58f" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+            <rect x="69" y="25" width="64" height="9" rx="4.5" fill="#33406f"/>
+            <rect x="69" y="43" width="48" height="7" rx="3.5" fill="#cdd4e9"/>
+            <rect x="19" y="78" width="115" height="8" rx="4" fill="#edeffa"/>
+            <rect x="19" y="78" width="90" height="8" rx="4" fill="#69c5b9"/>
+          </g>
+          <!-- Front floating package -->
+          <g filter="url(#shadow)" transform="translate(66 365) rotate(-7 100 37)">
+            <rect width="208" height="76" rx="19" fill="#fff" stroke="#e8e9fa"/>
+            <rect x="16" y="14" width="50" height="49" rx="14" fill="#efedff"/>
+            <path d="M41 25v26m0 0-9-9m9 9 9-9M28 56h26" stroke="#6556e7" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+            <rect x="82" y="23" width="99" height="9" rx="4.5" fill="#3c426f"/>
+            <rect x="82" y="41" width="74" height="7" rx="3.5" fill="#d5d9ea"/>
+            <rect x="82" y="55" width="51" height="6" rx="3" fill="#e7e9f5"/>
+          </g>
+          <circle cx="505" cy="402" r="15" fill="#fff" stroke="#e9e5ff" filter="url(#smallShadow)"/>
+          <path d="m498 402 5 5 10-11" fill="none" stroke="#7665ed" stroke-width="2.7" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
         </div>
       </section>
 
@@ -163,9 +276,16 @@
         <div class="cards" id="cards" aria-live="polite"><div class="empty">正在读取应用信息…</div></div>
       </section>
 
-      <section class="subscribe" id="subscribe">
-        <div><h3>添加到你常用的签名工具</h3><p>复制下方链接，在 Feather 或 AltStore 中添加软件源。<br>安装包由各项目的上游仓库提供。</p></div>
-        <div class="subscribe-actions"><code class="url" id="feed-url">读取中…</code><button class="btn primary" type="button" data-copy>复制地址</button></div>
+      <section class="contribute" id="contribute" aria-labelledby="contribute-title">
+        <div>
+          <span class="contribute-kicker">一起完善软件源</span>
+          <h3 id="contribute-title">推荐新的开源 iOS 应用</h3>
+          <p>发现值得收录的应用？欢迎通过 GitHub Issues 提交建议。请附上项目仓库、可下载 IPA 的 Releases 地址及简要功能介绍，我们会核实后再考虑收录。</p>
+        </div>
+        <div class="contribute-actions">
+          <a class="btn primary" href="https://github.com/xndeye/ipa/issues/new?title=%E6%8E%A8%E8%8D%90%E5%BC%80%E6%BA%90%E5%BA%94%E7%94%A8%EF%BC%9A&amp;body=%23%23%23%20%E5%BA%94%E7%94%A8%E5%90%8D%E7%A7%B0%0A%E8%AF%B7%E5%A1%AB%E5%86%99%E5%BA%94%E7%94%A8%E5%90%8D%E7%A7%B0%0A%0A%23%23%23%20%E5%BC%80%E6%BA%90%E4%BB%93%E5%BA%93%E5%9C%B0%E5%9D%80%0Ahttps%3A%2F%2Fgithub.com%2F%0A%0A%23%23%23%20IPA%20%E4%B8%8B%E8%BD%BD%E6%88%96%20Releases%20%E5%9C%B0%E5%9D%80%0Ahttps%3A%2F%2Fgithub.com%2F%0A%0A%23%23%23%20%E5%8A%9F%E8%83%BD%E7%AE%80%E4%BB%8B%E4%B8%8E%E6%8E%A8%E8%8D%90%E7%90%86%E7%94%B1%0A%E8%AF%B7%E7%AE%80%E5%8D%95%E4%BB%8B%E7%BB%8D%E5%BA%94%E7%94%A8%E7%94%A8%E9%80%94%E5%8F%8A%E6%8E%A8%E8%8D%90%E5%8E%9F%E5%9B%A0%E3%80%82%0A%0A%23%23%23%20%E5%85%B6%E4%BB%96%E4%BF%A1%E6%81%AF%EF%BC%88%E9%80%89%E5%A1%AB%EF%BC%89%0AiOS%20%E5%85%BC%E5%AE%B9%E7%89%88%E6%9C%AC%E3%80%81Bundle%20ID%E3%80%81%E5%AE%89%E8%A3%85%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9%E7%AD%89%E3%80%82" target="_blank" rel="noopener noreferrer">提交应用推荐 <span aria-hidden="true">↗</span></a>
+          <a class="btn ghost" href="https://github.com/xndeye/ipa/issues" target="_blank" rel="noopener noreferrer">查看已有提议</a>
+        </div>
       </section>
     </main>
 
@@ -185,7 +305,6 @@
   let activeCategory = '全部';
   let toastTimer;
 
-  $('feed-url').textContent = sourceURL.href;
   document.querySelectorAll('a[href="./source.json"]').forEach(a => a.href = sourceURL.href);
 
   function safeURL(value) {
@@ -257,19 +376,6 @@
       document.querySelector('meta[property="og:image"]').content = favicon;
       document.querySelector('meta[name="twitter:image"]').content = favicon;
     }
-  }
-
-  function renderFeatured() {
-    const grid = $('featured-icons');
-    const fragment = document.createDocumentFragment();
-    apps.slice(0, 9).forEach((app, index) => {
-      const square = element('span', 'mini-icon', app.name.slice(0, 1).toUpperCase());
-      square.style.background = colors[index % colors.length];
-      const icon = iconImage(app.iconURL);
-      if (icon) square.appendChild(icon);
-      fragment.appendChild(square);
-    });
-    grid.replaceChildren(fragment);
   }
 
   function render() {
@@ -371,7 +477,6 @@
     }).filter(app => app.name);
     $('app-count').textContent = apps.length + ' 款应用';
     $('data-state').textContent = '实时读取软件源';
-    renderFeatured();
     render();
   }
 
