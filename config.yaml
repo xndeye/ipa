@@ -2,6 +2,7 @@ name: Xndeye IPA
 identifier: io.xndeye.ipa
 subtitle: 收集一些实用的开源 iOS 应用
 iconURL: https://github.com/xndeye.png
+iconBaseURL: https://xndeye.github.io/ipa/icons
 upstream:
 
   feather:

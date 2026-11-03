@@ -13,6 +13,8 @@ import json
 import logging
 import os
 import re
+import shutil
+import struct
 import sys
 import time
 from concurrent.futures import ThreadPoolExecutor
@@ -48,6 +50,8 @@ MAX_WORKERS = 8  # 并发请求线程数上限
 # 源顶层需要原样从配置中复制的字段
 FEED_KEYS = ("name", "identifier", "subtitle", "iconURL")
 OUTPUT_FILE = Path("output") / "source.json"
+ICON_SOURCE_DIR = Path("icons")
+ICON_OUTPUT_DIR = OUTPUT_FILE.parent / "icons"
 
 # 解析 release 的 tag，规则如下：
 #   - 可带 v / V 前缀，主体为点分数字，如 1.2.3
@@ -88,6 +92,7 @@ class VersionInfo(TypedDict):
 class Source:
     """config.yaml 中 upstream 下的一个上游应用。"""
 
+    key: str  # config.yaml 中 upstream 的唯一标识
     repo: str  # "owner/name" 形式的 GitHub 仓库
     name: str
     bundle_identifier: str
@@ -99,10 +104,11 @@ class Source:
         return self.repo.partition("/")[0]
 
     @classmethod
-    def from_config(cls, raw: dict[str, str]) -> "Source":
+    def from_config(cls, key: str, raw: dict[str, str]) -> "Source":
         """从配置字典构造，并在配置有误时给出明确的错误信息。"""
         try:
             return cls(
+                key=key,
                 repo=raw["repo"],
                 name=raw["name"],
                 bundle_identifier=raw["bundleIdentifier"],
@@ -235,7 +241,7 @@ def build_app(source: Source, releases: list[dict[str, Any]]) -> dict[str, Any]:
         "developerName": source.owner,
         "subtitle": source.description,
         "localizedDescription": source.description,
-        "iconURL": f"https://github.com/{source.owner}.png",
+        "iconURL": f"{CONFIG['iconBaseURL'].rstrip('/')}/{source.key}.png",
         "version": newest["version"],
         "versionDate": newest["date"],
         "size": newest["size"],
@@ -249,6 +255,21 @@ def load_app(source: Source) -> dict[str, Any]:
     app = build_app(source, fetch_releases(source.repo))
     logger.info("%s：最新版本 %s，共 %d 个版本", source.repo, app["version"], len(app["versions"]))
     return app
+
+
+
+def publish_icons(sources: list[Source]) -> None:
+    """校验并复制静态应用图标，随 source.json 一同发布到 Pages。"""
+    ICON_OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+    for source in sources:
+        icon = ICON_SOURCE_DIR / f"{source.key}.png"
+        data = icon.read_bytes()  # 缺少图标立即失败，避免发布无效 iconURL
+        if not data.startswith(b"\x89PNG\r\n\x1a\n") or len(data) < 24:
+            raise ValueError(f"{icon} 不是有效的 PNG")
+        width, height = struct.unpack(">II", data[16:24])
+        if width != 512 or height != 512:
+            raise ValueError(f"{icon} 图标尺寸不符合要求：{width}x{height}")
+        shutil.copyfile(icon, ICON_OUTPUT_DIR / icon.name)
 
 
 def write_feed(feed: dict[str, Any]) -> None:
@@ -266,7 +287,7 @@ def main() -> int:
         level=os.getenv("LOG_LEVEL", "INFO").upper(),
         format="%(asctime)s %(levelname)s %(message)s",
     )
-    sources = [Source.from_config(raw) for raw in CONFIG["upstream"].values()]
+    sources = [Source.from_config(key, raw) for key, raw in CONFIG["upstream"].items()]
 
     apps: list[dict[str, Any]] = []
     failed: list[str] = []
@@ -289,6 +310,7 @@ def main() -> int:
 
     feed = {key: CONFIG[key] for key in FEED_KEYS}
     feed.update(apps=apps, news=[])
+    publish_icons(sources)
     write_feed(feed)
     logger.info("已生成 %s（共 %d 个应用）", OUTPUT_FILE, len(apps))
     return 0
