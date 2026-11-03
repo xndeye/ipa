@@ -39,11 +39,6 @@ jobs:
       - uses: actions/upload-pages-artifact@v5
         with:
           path: output
-      - uses: actions/upload-artifact@v7
-        with:
-          name: ipa-source
-          path: output/
-          retention-days: 1
 
   deploy:
     needs: build
@@ -59,23 +54,3 @@ jobs:
       - name: Deploy GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v5
-
-  snapshot:
-    needs: deploy
-    runs-on: ubuntu-latest
-    timeout-minutes: 10
-    permissions:
-      contents: write
-    steps:
-      - uses: actions/checkout@v7
-      - uses: actions/download-artifact@v8
-        with:
-          name: ipa-source
-          path: output
-      - name: Publish release snapshot
-        uses: JamesIves/github-pages-deploy-action@v4
-        with:
-          branch: release
-          folder: output
-          single-commit: true
-          clean: true
