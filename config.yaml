@@ -26,6 +26,13 @@ upstream:
     description: 非官方酷安客户端，支持动态、应用和社区内容浏览
     asset: ^c001apk-.*-ios-arm64-unsigned\.ipa$
 
+  coolapk-desktop:
+    repo: coolapk-desktop/Coolapk-Desktop
+    name: 酷安
+    bundleIdentifier: com.coolapk.desktop
+    description: 非官方跨平台酷安客户端，支持动态、社区、搜索和账号管理
+    asset: ^coolapk-v\d+(?:\.\d+)*-ios-arm64-unsigned\.ipa$
+
   kazumi:
     repo: Predidit/Kazumi
     name: Kazumi
