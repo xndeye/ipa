@@ -1,3 +1,14 @@
+# 应用分类规范：category 直接使用 AltStore 官方标准值（区分大小写）。
+#   developer     开发：编程、调试、服务器与开发运维
+#   entertainment 影音：音乐、影视、直播、动漫及媒体播放
+#   games         游戏：游戏及相关辅助
+#   lifestyle     生活：购物、出行、健康与日常服务
+#   other         其他：阅读、漫画等其他分类未覆盖的应用
+#   photo-video   摄影与视频：拍摄、修图、剪辑及影像创作
+#   social        社交：社区、论坛、社交网络与即时通信
+#   utilities     工具：系统、下载、文件管理、AI 助手及效率工具
+# 规则：每个应用必须声明唯一分类，按核心功能归类；不得自创分类值。
+# 参考：https://faq.altstore.io/developers/make-a-source
 name: Xndeye IPA
 identifier: io.xndeye.ipa
 subtitle: 收集一些实用的开源 iOS 应用
@@ -8,6 +19,7 @@ upstream:
   feather:
     repo: claration/feather
     name: Feather
+    category: utilities
     bundleIdentifier: thewonderofyou.Feather
     description: IPA 签名与安装工具，支持证书管理和软件源
     asset: ^Feather\.ipa$
@@ -15,6 +27,7 @@ upstream:
   piliplus:
     repo: bggRGjQaUbCoE/PiliPlus
     name: PiliPlus
+    category: entertainment
     bundleIdentifier: com.example.piliplus
     description: 第三方哔哩哔哩客户端，支持弹幕与视频缓存
     asset: ^PiliPlus_ios_.*\.ipa$
@@ -22,6 +35,7 @@ upstream:
   c001apk:
     repo: TG-Twilight/c001apk
     name: c001apk
+    category: social
     bundleIdentifier: com.example.c001apk.flutter
     description: 非官方酷安客户端，支持动态、应用和社区内容浏览
     asset: ^c001apk-.*-ios-arm64-unsigned\.ipa$
@@ -29,6 +43,7 @@ upstream:
   coolapk-desktop:
     repo: coolapk-desktop/Coolapk-Desktop
     name: 酷安
+    category: social
     bundleIdentifier: com.coolapk.desktop
     description: 非官方跨平台酷安客户端，支持动态、社区、搜索和账号管理
     asset: ^coolapk-v\d+(?:\.\d+)*-ios-arm64-unsigned\.ipa$
@@ -36,6 +51,7 @@ upstream:
   kazumi:
     repo: Predidit/Kazumi
     name: Kazumi
+    category: entertainment
     bundleIdentifier: com.example.kazumi
     description: 基于自定义规则的番剧搜索与播放客户端
     asset: ^Kazumi_ios_.*_no_sign\.ipa$
@@ -43,6 +59,7 @@ upstream:
   animeko:
     repo: open-ani/animeko
     name: Animeko
+    category: entertainment
     bundleIdentifier: org.animeko.animeko
     description: 多源追番客户端，支持弹幕和 Bangumi 进度同步
     asset: ^ani-.*\.ipa$
@@ -50,6 +67,7 @@ upstream:
   fluxdown:
     repo: zerx-lab/FluxDown
     name: FluxDown
+    category: utilities
     bundleIdentifier: com.fluxdown.app
     description: 多协议下载管理器，支持 HTTP、BT 和 eD2K 等协议
     asset: ^FluxDown-.*-ios-sideload-unsigned\.ipa$
@@ -57,6 +75,7 @@ upstream:
   serverbox:
     repo: lollipopkit/flutter_server_box
     name: ServerBox
+    category: developer
     bundleIdentifier: com.lollipopkit.toolbox
     description: 服务器管理工具，支持 SSH、SFTP 和状态监控
     asset: ^ServerBox_.*_NoSign\.ipa$
@@ -64,6 +83,7 @@ upstream:
   kelivo:
     repo: Chevey339/kelivo
     name: Kelivo
+    category: utilities
     bundleIdentifier: psyche.kelivo
     description: 多模型 AI 客户端，支持工具调用与 Agent 工作流
     asset: ^Kelivo_ios_.*\.ipa$
@@ -71,6 +91,7 @@ upstream:
   spotube:
     repo: team-spotube/spotube
     name: Spotube
+    category: entertainment
     bundleIdentifier: org.spotube.spotube.Spotube
     description: 插件驱动的开源音乐播放器，支持歌词与歌曲下载
     asset: ^Spotube-iOS\.ipa$|^Spotube-ios\.ipa$
@@ -78,6 +99,7 @@ upstream:
   purelive:
     repo: liuchuancong/pure_live
     name: Pure Live
+    category: entertainment
     bundleIdentifier: com.mystyle.purelive.liu
     description: 多平台直播聚合客户端，支持弹幕与多画面观看
     asset: ^PureLive-.*-ios-arm64-trollstore\.ipa$
@@ -85,6 +107,7 @@ upstream:
   anich:
     repo: Sle2p/AniCh
     name: AniCh
+    category: entertainment
     bundleIdentifier: cx.xs.open
     description: 番剧搜索与追番客户端，支持弹幕和离线缓存
     asset: ^anich-ios-no_sign-\d+(?:\.\d+)*\.ipa$
@@ -92,6 +115,7 @@ upstream:
   itorrent:
     repo: XITRIX/iTorrent
     name: iTorrent
+    category: utilities
     bundleIdentifier: com.xitrix.iTorrent2
     description: iOS BT 下载客户端，支持磁力链接与内置播放
     asset: ^iTorrent\.ipa$
@@ -99,6 +123,7 @@ upstream:
   skystream:
     repo: akashdh11/skystream
     name: SkyStream
+    category: entertainment
     bundleIdentifier: dev.akash.skystream
     description: 基于扩展的影视聚合播放器，需自行添加视频源
     asset: ^skystream-ios-unsigned-v\d+(?:\.\d+)*\.ipa$
@@ -106,6 +131,7 @@ upstream:
   melox:
     repo: youshen2/MeloX
     name: MeloX
+    category: entertainment
     bundleIdentifier: azki.moye.MeloX
     description: 原生 SwiftUI 网易云音乐第三方客户端，支持动态歌词
     asset: ^MeloX-iOS-unsigned\.ipa$
@@ -113,6 +139,7 @@ upstream:
   beansmusic:
     repo: XIaodou0416/Beans-Music
     name: Beans Music
+    category: entertainment
     bundleIdentifier: com.beans.app
     description: 多平台音乐客户端，支持网易云、QQ 音乐与酷狗
     asset: ^Beans-unsigned\.ipa$
@@ -120,6 +147,7 @@ upstream:
   aidoku:
     repo: Aidoku/Aidoku
     name: Aidoku
+    category: other
     bundleIdentifier: app.aidoku.Aidoku
     description: 多源漫画阅读客户端，支持离线阅读与本地漫画
     asset: ^Aidoku\.ipa$
@@ -127,6 +155,7 @@ upstream:
   simplelive:
     repo: June6699/dart_simple_live
     name: Simple Live
+    category: entertainment
     bundleIdentifier: com.xycz.simple-live
     description: 直播聚合客户端，支持虎牙、斗鱼、B站、抖音和快手
     asset: ^ios_no_sign\.ipa$
@@ -134,6 +163,7 @@ upstream:
   breeze:
     repo: deretame/Breeze
     name: Breeze
+    category: other
     bundleIdentifier: com.zephyr.breeze
     description: 插件式多源漫画阅读客户端
     asset: ^Breeze-iOS-v\d+(?:\.\d+)*\.ipa$
@@ -141,6 +171,7 @@ upstream:
   animeflow:
     repo: openAnimeFlow/AnimeFlow
     name: AnimeFlow
+    category: entertainment
     bundleIdentifier: com.ligg.animeflow
     description: 多源追番播放器，支持弹幕与 Bangumi 收藏同步
     asset: ^AnimeFlow-ios-\d+(?:\.\d+)*\.ipa$

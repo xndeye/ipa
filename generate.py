@@ -48,6 +48,18 @@ BACKOFF_BASE = 2  # 指数退避底数：第 n 次失败后等待 BACKOFF_BASE *
 RETRYABLE_STATUS = frozenset({429, 500, 502, 503, 504})
 MAX_WORKERS = 8  # 并发请求线程数上限
 
+# AltStore 官方分类枚举，配置值直接写入 source.json。
+ALTSTORE_CATEGORIES = frozenset({
+    "developer",
+    "entertainment",
+    "games",
+    "lifestyle",
+    "other",
+    "photo-video",
+    "social",
+    "utilities",
+})
+
 # 源顶层需要原样从配置中复制的字段
 FEED_KEYS = ("name", "identifier", "subtitle", "iconURL")
 OUTPUT_FILE = Path("output") / "source.json"
@@ -100,6 +112,7 @@ class Source:
     name: str
     bundle_identifier: str
     description: str
+    category: str
     asset_pattern: re.Pattern[str]  # 用于匹配 IPA 文件名的预编译正则
 
     @property
@@ -110,12 +123,16 @@ class Source:
     def from_config(cls, key: str, raw: dict[str, str]) -> "Source":
         """从配置字典构造，并在配置有误时给出明确的错误信息。"""
         try:
+            category = raw["category"]
+            if not isinstance(category, str) or category not in ALTSTORE_CATEGORIES:
+                raise ValueError(f"{key}：未知分类 {category!r}，必须使用 AltStore 官方分类值")
             return cls(
                 key=key,
                 repo=raw["repo"],
                 name=raw["name"],
                 bundle_identifier=raw["bundleIdentifier"],
                 description=raw["description"],
+                category=category,
                 asset_pattern=re.compile(raw["asset"]),
             )
         except KeyError as exc:
@@ -242,6 +259,7 @@ def build_app(source: Source, releases: list[dict[str, Any]]) -> dict[str, Any]:
         "name": source.name,
         "bundleIdentifier": source.bundle_identifier,
         "developerName": source.owner,
+        "category": source.category,
         "subtitle": source.description,
         "localizedDescription": source.description,
         "iconURL": f"{CONFIG['iconBaseURL'].rstrip('/')}/{source.key}.png",
