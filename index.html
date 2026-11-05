@@ -266,10 +266,6 @@
         <div class="filters">
           <div class="tabs" role="group" aria-label="按类型筛选">
             <button class="tab active" type="button" data-category="全部" aria-pressed="true">全部</button>
-            <button class="tab" type="button" data-category="影音" aria-pressed="false">影音</button>
-            <button class="tab" type="button" data-category="阅读" aria-pressed="false">阅读</button>
-            <button class="tab" type="button" data-category="工具" aria-pressed="false">工具</button>
-            <button class="tab" type="button" data-category="社区" aria-pressed="false">社区</button>
           </div>
           <label class="search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 5 5"/></svg><input id="search" type="search" placeholder="搜索应用名称或描述" autocomplete="off" aria-label="搜索应用"></label>
         </div>
@@ -297,8 +293,18 @@
 (() => {
   'use strict';
 
-  // source.json 是页面和站点元数据的唯一数据源。
+  // 应用数据读取 source.json；中文分类由生成器从 config.yaml 注入。
   const sourceURL = new URL('./source.json', document.baseURI);
+  const categoryLabels = Object.freeze({
+    'developer': '开发',
+    'entertainment': '影音',
+    'games': '游戏',
+    'lifestyle': '生活',
+    'other': '其他',
+    'photo-video': '摄影与视频',
+    'social': '社交',
+    'utilities': '工具',
+  });
   const $ = id => document.getElementById(id);
   const colors = ['#6f61dc','#32b29f','#d79b51','#e1789b','#667ce0','#6870ca','#4597ac','#658aeb','#8b74cd','#d78564'];
   let apps = [];
@@ -325,13 +331,6 @@
     } catch {
       return '';
     }
-  }
-
-  function categoryOf(description) {
-    if (/漫画|阅读/.test(description)) return '阅读';
-    if (/酷安|社区|社交/.test(description)) return '社区';
-    if (/音乐|直播|视频|弹幕|番剧|影视|动漫|追番|播放/.test(description)) return '影音';
-    return '工具';
   }
 
   function element(tag, className, value) {
@@ -397,7 +396,7 @@
       const details = element('div');
       details.style.minWidth = '0';
       details.appendChild(element('div', 'app-title', app.name));
-      details.appendChild(element('div', 'app-category', app.category + (app.version ? ' · v' + app.version : '')));
+      details.appendChild(element('div', 'app-category', categoryLabels[app.category] + (app.version ? ' · v' + app.version : '')));
       head.appendChild(details);
       card.appendChild(head);
       card.appendChild(element('p', 'app-sub', app.description));
@@ -445,14 +444,29 @@
   }
 
   document.querySelectorAll('[data-copy]').forEach(button => button.addEventListener('click', copySource));
-  document.querySelectorAll('[data-category]').forEach(button => button.addEventListener('click', () => {
+  const categoryTabs = document.querySelector('.tabs');
+  categoryTabs.addEventListener('click', event => {
+    const button = event.target.closest('[data-category]');
+    if (!button || !categoryTabs.contains(button)) return;
     activeCategory = button.dataset.category;
-    document.querySelectorAll('[data-category]').forEach(tab => {
+    categoryTabs.querySelectorAll('[data-category]').forEach(tab => {
       tab.classList.toggle('active', tab === button);
       tab.setAttribute('aria-pressed', String(tab === button));
     });
     render();
-  }));
+  });
+
+  function populateCategoryTabs() {
+    const used = new Set(apps.map(app => app.category));
+    for (const category of Object.keys(categoryLabels)) {
+      if (!used.has(category)) continue;
+      const tab = element('button', 'tab', categoryLabels[category]);
+      tab.type = 'button';
+      tab.dataset.category = category;
+      tab.setAttribute('aria-pressed', 'false');
+      categoryTabs.appendChild(tab);
+    }
+  }
   $('search').addEventListener('input', render);
 
   async function load() {
@@ -464,6 +478,10 @@
     apps = feed.apps.map((app, index) => {
       const name = String(app.name || '').trim();
       const description = String(app.subtitle || app.localizedDescription || '').trim();
+      const category = String(app.category || 'other');
+      if (!Object.prototype.hasOwnProperty.call(categoryLabels, category)) {
+        throw new Error('应用分类无效：' + name + ' (' + category + ')');
+      }
       return {
         index,
         name,
@@ -472,9 +490,10 @@
         iconURL: app.iconURL,
         version: String(app.version || ''),
         downloadURL: safeURL(app.downloadURL),
-        category: categoryOf(description)
+        category
       };
     }).filter(app => app.name);
+    populateCategoryTabs();
     $('app-count').textContent = apps.length + ' 款应用';
     $('data-state').textContent = '实时读取软件源';
     render();
