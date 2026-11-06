@@ -29,6 +29,7 @@ https://xndeye.github.io/ipa/source.json
 | MeloX | [youshen2/MeloX](https://github.com/youshen2/MeloX) |
 | Beans Music | [XIaodou0416/Beans-Music](https://github.com/XIaodou0416/Beans-Music) |
 | Aidoku | [Aidoku/Aidoku](https://github.com/Aidoku/Aidoku) |
+| 小浣熊阅读 | [Aminark/legado-ios](https://github.com/Aminark/legado-ios) |
 | Simple Live | [June6699/dart_simple_live](https://github.com/June6699/dart_simple_live) |
 | Breeze | [deretame/Breeze](https://github.com/deretame/Breeze) |
 | AnimeFlow | [openAnimeFlow/AnimeFlow](https://github.com/openAnimeFlow/AnimeFlow) |

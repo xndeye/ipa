@@ -113,6 +113,7 @@ class Source:
     bundle_identifier: str
     description: str
     category: str
+    icon_url: str | None  # 可选：使用上游托管的 HTTPS 图标
     asset_pattern: re.Pattern[str]  # 用于匹配 IPA 文件名的预编译正则
 
     @property
@@ -126,6 +127,9 @@ class Source:
             category = raw["category"]
             if not isinstance(category, str) or category not in ALTSTORE_CATEGORIES:
                 raise ValueError(f"{key}：未知分类 {category!r}，必须使用 AltStore 官方分类值")
+            icon_url = raw.get("iconURL")
+            if icon_url is not None and (not isinstance(icon_url, str) or not icon_url.startswith("https://")):
+                raise ValueError(f"{key}：iconURL 必须是 HTTPS 地址")
             return cls(
                 key=key,
                 repo=raw["repo"],
@@ -133,6 +137,7 @@ class Source:
                 bundle_identifier=raw["bundleIdentifier"],
                 description=raw["description"],
                 category=category,
+                icon_url=icon_url,
                 asset_pattern=re.compile(raw["asset"]),
             )
         except KeyError as exc:
@@ -262,7 +267,7 @@ def build_app(source: Source, releases: list[dict[str, Any]]) -> dict[str, Any]:
         "category": source.category,
         "subtitle": source.description,
         "localizedDescription": source.description,
-        "iconURL": f"{CONFIG['iconBaseURL'].rstrip('/')}/{source.key}.png",
+        "iconURL": source.icon_url or f"{CONFIG['iconBaseURL'].rstrip('/')}/{source.key}.png",
         "version": newest["version"],
         "versionDate": newest["date"],
         "size": newest["size"],
@@ -283,6 +288,8 @@ def publish_icons(sources: list[Source]) -> None:
     """校验并复制静态应用图标，随 source.json 一同发布到 Pages。"""
     ICON_OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     for source in sources:
+        if source.icon_url is not None:
+            continue  # 直接引用上游图标，不需要本地文件
         icon = ICON_SOURCE_DIR / f"{source.key}.png"
         data = icon.read_bytes()  # 缺少图标立即失败，避免发布无效 iconURL
         if not data.startswith(b"\x89PNG\r\n\x1a\n") or len(data) < 24:
