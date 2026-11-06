@@ -158,7 +158,6 @@ upstream:
     category: other
     bundleIdentifier: com.epiboly.legado
     description: 兼容阅读书源的 iOS 阅读器，支持多源搜书、书架、TXT/EPUB 和朗读
-    iconURL: https://raw.githubusercontent.com/Aminark/legado-ios/12e175c57da5819862b7039fac7034a29635de6c/App/Assets.xcassets/AppIcon.appiconset/AppIcon-1024.png
     asset: ^legado-ios-v\d+(?:\.\d+)*-build\d+-unsigned\.ipa$
 
   simplelive:
