@@ -183,3 +183,11 @@ upstream:
     bundleIdentifier: com.ligg.animeflow
     description: 多源追番播放器，支持弹幕与 Bangumi 收藏同步
     asset: ^AnimeFlow-ios-\d+(?:\.\d+)*\.ipa$
+
+  hongguo-ios:
+    repo: OOIUa/hongguo-ios
+    name: 红果短剧
+    category: entertainment
+    bundleIdentifier: com.ooiua.hongguo.ios
+    description: 第三方红果短剧客户端，支持短剧、漫剧、AI 剧浏览与播放，以及搜索、收藏和观看历史
+    asset: ^Hongguo-iOS-\d+(?:\.\d+)*-unsigned\.ipa$
