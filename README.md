@@ -33,8 +33,7 @@ https://xndeye.github.io/ipa/source.json
 | Simple Live | [June6699/dart_simple_live](https://github.com/June6699/dart_simple_live) |
 | Breeze | [deretame/Breeze](https://github.com/deretame/Breeze) |
 | AnimeFlow | [openAnimeFlow/AnimeFlow](https://github.com/openAnimeFlow/AnimeFlow) |
-| 红果短剧[^hg] | [OOIUa/hongguo-ios](https://github.com/OOIUa/hongguo-ios) |
+| 红果短剧 | [OOIUa/hongguo-ios](https://github.com/OOIUa/hongguo-ios) |
 
 [^pl]: IPA 标记为 `trollstore`，普通证书签名的兼容性未验证。
 [^it]: 官方仅明确支持 AltStore / SideStore，Feather 兼容性无官方保证。
-[^hg]: 第三方客户端，发布无签名 IPA，需自行签名安装，最低支持 iOS 17.0。图标依据上游 [GPL-3.0-only 授权](https://github.com/OOIUa/hongguo-ios/blob/main/LICENSE) 的 [图标几何](https://github.com/OOIUa/hongguo-ios/blob/main/scripts/make-icon.swift) 重新渲染为 512 × 512。
