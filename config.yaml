@@ -191,3 +191,11 @@ upstream:
     bundleIdentifier: com.ooiua.hongguo.ios
     description: 第三方红果短剧客户端，支持短剧、漫剧、AI 剧浏览与播放，以及搜索、收藏和观看历史
     asset: ^Hongguo-iOS-\d+(?:\.\d+)*-unsigned\.ipa$
+
+  moonfin:
+    repo: Moonfin-Client/Moonfin-Core
+    name: Moonfin
+    category: entertainment
+    bundleIdentifier: org.moonfin.app
+    description: 多媒体服务器客户端，支持 Jellyfin、Emby、Plex 和 Silo
+    asset: ^Moonfin_iOS_v\d+(?:\.\d+)*\.ipa$
