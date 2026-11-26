@@ -35,6 +35,7 @@ https://xndeye.github.io/ipa/source.json
 | AnimeFlow | [openAnimeFlow/AnimeFlow](https://github.com/openAnimeFlow/AnimeFlow) |
 | 红果短剧 | [OOIUa/hongguo-ios](https://github.com/OOIUa/hongguo-ios) |
 | Moonfin | [Moonfin-Client/Moonfin-Core](https://github.com/Moonfin-Client/Moonfin-Core) |
+| Cmby | [CeRu-007/Cmby](https://github.com/CeRu-007/Cmby) |
 
 [^pl]: IPA 标记为 `trollstore`，普通证书签名的兼容性未验证。
 [^it]: 官方仅明确支持 AltStore / SideStore，Feather 兼容性无官方保证。

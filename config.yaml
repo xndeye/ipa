@@ -199,3 +199,11 @@ upstream:
     bundleIdentifier: org.moonfin.app
     description: 多媒体服务器客户端，支持 Jellyfin、Emby、Plex 和 Silo
     asset: ^Moonfin_iOS_v\d+(?:\.\d+)*\.ipa$
+
+  cmby:
+    repo: CeRu-007/Cmby
+    name: Cmby
+    category: entertainment
+    bundleIdentifier: com.cmby.app
+    description: 多媒体服务器客户端，支持 Emby、Jellyfin、弹幕与双语字幕
+    asset: ^cmby-ios-v\d+(?:\.\d+)*_no_sign\.ipa$
